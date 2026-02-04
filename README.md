@@ -5,7 +5,7 @@ This repository contains my **personal portfolio website**, created to showcase 
 ---
 
 ## 🚀 Live Demo
-🔗 Portfolio Website: **(Add your Netlify/GitHub Pages link here)**
+🔗 Portfolio Website: https://raneesh-portfolio.netlify.app/
 
 ---
 
@@ -32,14 +32,18 @@ This repository contains my **personal portfolio website**, created to showcase 
 ---
 
 ## 📸 Preview
-(Add screenshots of your website here)
+<img width="1884" height="843" alt="image" src="https://github.com/user-attachments/assets/8f27fd34-bf00-40df-a279-c9aee499a0c9" />
+<img width="1711" height="891" alt="image" src="https://github.com/user-attachments/assets/0d372006-63ed-40c7-b58f-8a84e310eae8" />
+<img width="1666" height="754" alt="image" src="https://github.com/user-attachments/assets/03f43c04-8c66-4c6b-8a58-d60f28e7fff6" />
+
+
 
 ---
 
 
 ---
 
-## Conatact
+## Contact
 
 GitHub: https://github.com/Raneesh-69
 
