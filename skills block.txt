@@ -1,6 +1,14 @@
+<<<<<<< HEAD
  <div class="skill border1 border_right">
           <div class="items">
             <img src="./img/html.png" alt="">
             <p>HTML</p>
           </div>
+=======
+ <div class="skill border1 border_right">
+          <div class="items">
+            <img src="./img/html.png" alt="">
+            <p>HTML</p>
+          </div>
+>>>>>>> 60257791dd2b7f6885f771c98456be70bd07b914
         </div>

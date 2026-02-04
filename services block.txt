@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="service-section">
           <div class="service">
             <img src="./img/uiux.png" alt="Machine Learning">
@@ -5,4 +6,13 @@
             <p>I build and train machine learning models for classification, regression, and clustering problems. I specialize in developing predictive models and deep learning solutions.</p>
           </div>
 
+=======
+<div class="service-section">
+          <div class="service">
+            <img src="./img/uiux.png" alt="Machine Learning">
+            <h3>Machine Learning</h3>
+            <p>I build and train machine learning models for classification, regression, and clustering problems. I specialize in developing predictive models and deep learning solutions.</p>
+          </div>
+
+>>>>>>> 60257791dd2b7f6885f771c98456be70bd07b914
         </div>
