@@ -1,0 +1,6 @@
+ <div class="skill border1 border_right">
+          <div class="items">
+            <img src="./img/html.png" alt="">
+            <p>HTML</p>
+          </div>
+        </div>

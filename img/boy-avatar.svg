@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+  <!-- Head -->
+  <circle cx="100" cy="70" r="35" fill="#D4A574"/>
+  
+  <!-- Hair -->
+  <path d="M 65 50 Q 65 30 100 25 Q 135 30 135 50 Z" fill="#3D2817"/>
+  <path d="M 70 40 Q 75 35 80 40" stroke="#3D2817" stroke-width="2" fill="none"/>
+  <path d="M 90 35 Q 95 32 100 35" stroke="#3D2817" stroke-width="2" fill="none"/>
+  <path d="M 110 35 Q 115 32 120 35" stroke="#3D2817" stroke-width="2" fill="none"/>
+  
+  <!-- Eyes -->
+  <circle cx="85" cy="65" r="4" fill="#1a1a1a"/>
+  <circle cx="115" cy="65" r="4" fill="#1a1a1a"/>
+  <circle cx="86" cy="64" r="1.5" fill="white"/>
+  <circle cx="116" cy="64" r="1.5" fill="white"/>
+  
+  <!-- Eyebrows -->
+  <path d="M 80 58 Q 85 56 90 58" stroke="#3D2817" stroke-width="1.5" fill="none"/>
+  <path d="M 110 58 Q 115 56 120 58" stroke="#3D2817" stroke-width="1.5" fill="none"/>
+  
+  <!-- Nose -->
+  <line x1="100" y1="65" x2="100" y2="75" stroke="#C89968" stroke-width="1.5"/>
+  <circle cx="97" cy="76" r="2" fill="#C89968"/>
+  <circle cx="103" cy="76" r="2" fill="#C89968"/>
+  
+  <!-- Mouth -->
+  <path d="M 90 82 Q 100 87 110 82" stroke="#B8483F" stroke-width="2" fill="none"/>
+  
+  <!-- Neck -->
+  <rect x="92" y="100" width="16" height="15" fill="#D4A574"/>
+  
+  <!-- Shirt -->
+  <path d="M 60 115 L 70 115 L 70 180 Q 70 190 60 190 L 60 115" fill="#1E3A8A"/>
+  <path d="M 140 115 L 130 115 L 130 180 Q 130 190 140 190 L 140 115" fill="#1E3A8A"/>
+  <rect x="70" y="115" width="60" height="75" fill="#2563EB"/>
+  
+  <!-- Shirt collar -->
+  <path d="M 85 115 L 92 110 L 100 115" fill="#1E3A8A"/>
+  <path d="M 115 115 L 108 110 L 100 115" fill="#1E3A8A"/>
+  
+  <!-- Buttons -->
+  <circle cx="100" cy="135" r="2" fill="#1E3A8A" stroke="white" stroke-width="0.5"/>
+  <circle cx="100" cy="150" r="2" fill="#1E3A8A" stroke="white" stroke-width="0.5"/>
+  <circle cx="100" cy="165" r="2" fill="#1E3A8A" stroke="white" stroke-width="0.5"/>
+  
+  <!-- Arms -->
+  <ellipse cx="55" cy="145" rx="12" ry="35" fill="#D4A574"/>
+  <ellipse cx="145" cy="145" rx="12" ry="35" fill="#D4A574"/>
+  
+  <!-- Hands -->
+  <circle cx="52" cy="185" r="10" fill="#D4A574"/>
+  <circle cx="148" cy="185" r="10" fill="#D4A574"/>
+  
+  <!-- Pants -->
+  <rect x="75" y="190" width="20" height="60" fill="#2D3748"/>
+  <rect x="105" y="190" width="20" height="60" fill="#2D3748"/>
+  
+  <!-- Shoes -->
+  <ellipse cx="85" cy="255" rx="15" ry="10" fill="#1a1a1a"/>
+  <ellipse cx="115" cy="255" rx="15" ry="10" fill="#1a1a1a"/>
+</svg>

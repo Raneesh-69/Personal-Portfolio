@@ -1,0 +1,8 @@
+<div class="service-section">
+          <div class="service">
+            <img src="./img/uiux.png" alt="Machine Learning">
+            <h3>Machine Learning</h3>
+            <p>I build and train machine learning models for classification, regression, and clustering problems. I specialize in developing predictive models and deep learning solutions.</p>
+          </div>
+
+        </div>

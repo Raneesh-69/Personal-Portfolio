@@ -1,0 +1,21 @@
+<div class="project-card">
+  <img src="img/project02.png" alt="Robot Automation">
+  <div class="project-links">
+  <a href="https://github.com/yourusername/project-repo"
+     target="_blank"
+     class="btn github">
+    GitHub
+  </a>
+
+  <a href="https://your-live-demo-link.com"
+     target="_blank"
+     class="btn live">
+    Live Demo
+  </a>
+</div>
+
+  <div class="overlay">
+    <h3>Robot Automation</h3>
+    <p>AI-powered robot project</p>
+  </div>
+</div>
