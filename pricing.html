@@ -39,6 +39,8 @@
     />
     <!-- my css -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- title -->
     <title>Pitamber Raneesh Joga | Portfolio</title>
     <style>
@@ -54,7 +56,7 @@
     <main-header>
       <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">Divya k</a>
+          <a class="navbar-brand" href="index.html">Raneesh</a>
           <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="toggler-icon top-bar"></span>
             <span class="toggler-icon middle-bar"></span>
@@ -171,8 +173,8 @@
                 <a href="https://www.linkedin.com/in/iamdivyak/"
                   ><img src="./img/LinkedIn Circled.png" alt="linkedin"
                 /></a>
-                <a href="https://twitter.com/Imdivyakumari">
-                  <img src="img/twt2.png" alt="twitter"
+                <a href="https://www.kaggle.com/pitamberraneeshjoga" target="_blank">
+                  <img src="img/kaggle-icon.png" alt="kaggle"
                 /></a>
                 <a href="https://github.com/Iamdivyak"
                   ><img src="./img/GitHub.png" alt="github"
@@ -181,16 +183,17 @@
             </div>
             <div class="col-md-6">
               <div class="form">
-                <form action="emailto:">
-                  <input type="text" placeholder="Full Name" /><br />
-                  <input type="email" placeholder="Email" />
-                  <input type="number" placeholder="Phone No." /><br />
+                <form action=\"https://formsubmit.co/prjoga9@gmail.com\" method=\"POST\">
+                  <input type=\"text\" name=\"fullname\" placeholder=\"Full Name\" required /><br />
+                  <input type=\"email\" name=\"email\" placeholder=\"Email\" required />
+                  <input type=\"number\" name=\"phone\" placeholder=\"Phone No.\" /><br />
                   <textarea
-                    name="message"
-                    id="msg"
-                    placeholder="Message"
-                    cols="30"
-                    rows="10"
+                    name=\"message\"
+                    id=\"msg\"
+                    placeholder=\"Message\"
+                    cols=\"30\"
+                    rows=\"10\"
+                    required
                   ></textarea
                   ><br />
                   <button type="submit">Send Message</button>
@@ -218,8 +221,13 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!--custom js  -->
     <script src="js/pricing.js"></script>
     <script src="js/script.js"></script>
+    
+    <!-- Premium Animations & Features -->
+    <script src="js/animations.js"></script>
   </body>
 </html>

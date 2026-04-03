@@ -17,6 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Satisfy&display=swap" rel="stylesheet">
   <!-- my css -->
   <link rel="stylesheet" href="css/style.css"> 
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- title -->
     <title>Pitamber Raneesh Joga | Student Portfolio</title>
 </head>
@@ -43,7 +45,7 @@
             <a class="nav-link p-4" aria-current="page" href="certifications.html">Certifications</a>
             </li>             
           </ul>
-         <a href="cv/Pitamber Raneesh Joga's Resume-hackerresume.pdf" download="Pitamber_Resume" class="my-cv">Download CV</a>
+         <a href="cv/Pitamber_Joga_Resume.pdf" download="Pitamber_Resume" class="my-cv">Download CV</a>
         </div>
       </div>
       </nav>
@@ -52,57 +54,104 @@
       <!-- projects -->
        
       
-      <div class="section">
-        
-       <div class="container-fluid">
+      <div class="section particle-bg">
+        <canvas class="particle-canvas"></canvas>
+       <div class="container-fluid" style="position: relative; z-index: 1;">
         
         <p class="title">-PROJECTS</p>
-         <div class="col-md-14 img-sec text-center">
+         <div class="col-md-12 img-sec text-center">
             <img src="./img/pitamber-avatar6.png" class="img-fluid" alt="AI/ML Student">
           </div>
-        <div class="poject-section">
-          <h2>FEATURED WORK</h2>
-          <p class="para">I develop machine learning models, create AI applications, and showcase my expertise in data science through real-world projects and practical implementations.</p>
+        <div class="project-section">
+          <h2>PROJECTS</h2>
+          <p class="para">I organize my work into advanced projects that highlight deeper technical work and normal projects that cover practical builds, experiments, and smaller applications.</p>
         </div>
-        <div class="project-grid">
 
-  <div class="project-card">
-    <img src="img/project02.png" alt="Robot Automation">
+        <div class="project-category">
+          <div class="project-category-heading">
+            <p class="title">-ADVANCED PROJECTS</p>
+            <h3>Main portfolio work</h3>
+            <p class="para">These are the flagship projects that show my strongest problem-solving, architecture, and implementation skills.</p>
+          </div>
 
-    <div class="project-links">
-      <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-      <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-    </div>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="img/project02.png" alt="Robot Automation">
 
-    <div class="overlay">
-      <h3>Robot Automation</h3>
-      <p>AI-powered robot project</p>
-    </div>
-  </div>
+              <div class="project-links">
+                <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
+                <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+              </div>
 
-  <div class="project-card">
-    <img src="img/project02.png" alt="Robot Automation">
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="project-links">
-      <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-      <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-    </div>
+        <div class="project-category project-category-secondary">
+          <div class="project-category-heading">
+            <p class="title">-NORMAL PROJECTS</p>
+            <h3>Additional builds</h3>
+            <p class="para">These projects are smaller, practical, or experimental pieces that still show consistency and range.</p>
+          </div>
 
-    <div class="overlay">
-      <h3>Robot Automation</h3>
-      <p>AI-powered robot project</p>
-    </div>
-  </div>
+          <div class="project-grid">
+            <div class="project-card">
+            <img src="img/MaskVsnomask.png" alt="FaceMaskr web app preview">
 
-</div>
+            <div class="project-links">
+              <a href="https://github.com/Raneesh-69/Face_Mask" target="_blank" class="btn github">GitHub</a>
+              <a href="https://facemaskr.netlify.app//" target="_blank" class="btn live">Live Demo</a>
+              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+            </div>>
+
+            <div class="overlay">
+              <h3>FaceMaskr</h3>
+              <p>Mask vs No Mask computer vision demo</p>
+            </div>
+          </div>
+           <div class="project-card">
+            <img src="img/project01.jpg" alt="Robot Automation">
+
+            <div class="project-links">
+              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
+              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
+              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+            </div>
+
+            <div class="overlay">
+              <h3>Robot Automation</h3>
+              <p>AI-powered robot project</p>
+            </div>
+          </div> <div class="project-card">
+            <img src="img/project01.jpg" alt="Robot Automation">
+
+            <div class="project-links">
+              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
+              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
+              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+            </div>
+
+            <div class="overlay">
+              <h3>Robot Automation</h3>
+              <p>AI-powered robot project</p>
+            </div>
+          </div>
+          </div>
+        </div>
 
        </div>
       </div>
 
        
         <!-- connect me -->
-        <div class="section">
-          <div class="container-fluid">
+        <div class="section particle-bg">
+          <canvas class="particle-canvas"></canvas>
+          <div class="container-fluid" style="position: relative; z-index: 1;">
            <p class="title">-CONTACT</p>
            <div class="contact-section">
              <h2>GET IN TOUCH</h2>
@@ -121,7 +170,7 @@
           </div>
               <div class="social-media">
                 <a href="https://www.linkedin.com/in/pitamber-joga-79656a351/" target="_blank"><img src="./img/LinkedIn Circled.png" alt="linkedin"></a>
-                <a href="https://x.com/RaneeshJoga" target="_blank"> <img src="img/twt2.png" alt="twitter"></a>
+                <a href="https://www.kaggle.com/pitamberraneeshjoga" target="_blank"> <img src="img/kaggle-icon.png" alt="kaggle"></a>
                 <a href="https://github.com/Raneesh-69" target="_blank"><img src="./img/GitHub.png" alt="github"></a>
                 <a href="https://www.instagram.com/raneesh_joga/" target="_blank"><img src="./img/Instagram.png" alt="instagram"></a>
               </div>
@@ -129,11 +178,11 @@
               </div>
               <div class="col-md-6">
                 <div class="form">
-                  <form action="emailto:">
-                    <input type="text" placeholder="Full Name"><br>
-                    <input type="email" placeholder="Email">
-                    <input type="number" placeholder="Phone No."><br>
-                    <textarea name="message" id="msg" placeholder="Message" cols="30" rows="10"></textarea><br>
+                  <form action="https://formsubmit.co/prjoga9@gmail.com" method="POST">
+                    <input type="text" name="fullname" placeholder="Full Name" required><br>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="number" name="phone" placeholder="Phone No."><br>
+                    <textarea name="message" id="msg" placeholder="Message" cols="30" rows="10" required></textarea><br>
                     <button type="submit">Send Message</button>
                   </form>
                 </div>
@@ -154,7 +203,109 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- bootstrap js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Universal Particle System -->
+  <script>
+    // Universal Particle System
+    class ParticleSection {
+      constructor(section) {
+        this.section = section;
+        this.canvas = section.querySelector('.particle-canvas');
+        if (!this.canvas) return;
+        
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.particleCount = 40;
+        
+        this.resizeCanvas();
+        window.addEventListener('resize', () => this.resizeCanvas());
+        
+        this.initParticles();
+        this.animate();
+      }
+
+      resizeCanvas() {
+        this.canvas.width = this.section.offsetWidth;
+        this.canvas.height = this.section.offsetHeight;
+      }
+
+      initParticles() {
+        this.particles = [];
+        for (let i = 0; i < this.particleCount; i++) {
+          this.particles.push({
+            x: Math.random() * this.canvas.width,
+            y: Math.random() * this.canvas.height,
+            vx: (Math.random() - 0.5) * 0.8,
+            vy: (Math.random() - 0.5) * 0.8,
+            radius: Math.random() * 2 + 1,
+            opacity: Math.random() * 0.5 + 0.2,
+            hue: Math.random() * 60 + 200
+          });
+        }
+      }
+
+      updateParticle(p) {
+        p.x += p.vx;
+        p.y += p.vy;
+        
+        if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+        if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+      }
+
+      drawParticle(p) {
+        this.ctx.beginPath();
+        this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        this.ctx.fillStyle = `hsla(${p.hue}, 70%, 50%, ${p.opacity})`;
+        this.ctx.fill();
+      }
+
+      drawConnections() {
+        for (let i = 0; i < this.particles.length; i++) {
+          for (let j = i + 1; j < this.particles.length; j++) {
+            const dx = this.particles[i].x - this.particles[j].x;
+            const dy = this.particles[i].y - this.particles[j].y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            if (distance < 120) {
+              this.ctx.strokeStyle = `rgba(242, 108, 79, ${0.15 * (1 - distance / 120)})`;
+              this.ctx.lineWidth = 0.8;
+              this.ctx.beginPath();
+              this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+              this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+              this.ctx.stroke();
+            }
+          }
+        }
+      }
+
+      animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        this.particles.forEach(p => {
+          this.updateParticle(p);
+          this.drawParticle(p);
+        });
+        
+        this.drawConnections();
+        requestAnimationFrame(() => this.animate());
+      }
+    }
+
+    // Initialize particles for all sections with particle-bg class
+    document.addEventListener('DOMContentLoaded', () => {
+      const particleSections = document.querySelectorAll('.particle-bg');
+      particleSections.forEach(section => {
+        new ParticleSection(section);
+      });
+    });
+  </script>
+  
     <!--custom js  -->
     <script src="js/script.js"></script>
+    
+    <!-- Premium Animations & Features -->
+    <script src="js/animations.js"></script>
 </body>
 </html>
