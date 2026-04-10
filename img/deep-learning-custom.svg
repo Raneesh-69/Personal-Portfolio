@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Deep Learning Icon</title>
+  <desc id="desc">Stylized neural network icon with connected nodes</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="link" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="url(#bg)"/>
+
+  <g stroke="url(#link)" stroke-width="4" stroke-linecap="round" opacity="0.9">
+    <line x1="32" y1="36" x2="64" y2="24"/>
+    <line x1="32" y1="36" x2="64" y2="64"/>
+    <line x1="32" y1="92" x2="64" y2="64"/>
+    <line x1="32" y1="92" x2="64" y2="104"/>
+    <line x1="64" y1="24" x2="96" y2="36"/>
+    <line x1="64" y1="64" x2="96" y2="36"/>
+    <line x1="64" y1="64" x2="96" y2="92"/>
+    <line x1="64" y1="104" x2="96" y2="92"/>
+  </g>
+
+  <g fill="#e0f2fe" stroke="#dbeafe" stroke-width="2">
+    <circle cx="32" cy="36" r="7"/>
+    <circle cx="32" cy="92" r="7"/>
+    <circle cx="64" cy="24" r="7"/>
+    <circle cx="64" cy="64" r="9"/>
+    <circle cx="64" cy="104" r="7"/>
+    <circle cx="96" cy="36" r="7"/>
+    <circle cx="96" cy="92" r="7"/>
+  </g>
+</svg>

@@ -168,7 +168,9 @@ class StickyNavbar {
 
   init() {
     this.navbar?.classList.add("navbar-enhanced");
-    window.addEventListener("scroll", () => this.handleScroll());
+    window.addEventListener("scroll", () => this.handleScroll(), {
+      passive: true,
+    });
   }
 
   handleScroll() {
@@ -231,7 +233,9 @@ class ActiveSectionHighlight {
   }
 
   init() {
-    window.addEventListener("scroll", () => this.updateActive());
+    window.addEventListener("scroll", () => this.updateActive(), {
+      passive: true,
+    });
   }
 
   updateActive() {

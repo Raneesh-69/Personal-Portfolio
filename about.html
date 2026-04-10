@@ -154,13 +154,27 @@ I'm always eager to take on new challenges, collaborate with peers, and contribu
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = 40;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        this.particleCount = isMobile ? 14 : 24;
+        this.isVisible = false;
+        this.frame = 0;
         
         this.resizeCanvas();
         window.addEventListener('resize', () => this.resizeCanvas());
+        this.setupVisibilityObserver();
         
         this.initParticles();
         this.animate();
+      }
+
+      setupVisibilityObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0]) {
+            this.isVisible = entries[0].isIntersecting;
+          }
+        }, { threshold: 0.05 });
+
+        observer.observe(this.section);
       }
 
       resizeCanvas() {
@@ -218,6 +232,12 @@ I'm always eager to take on new challenges, collaborate with peers, and contribu
       }
 
       animate() {
+        if (document.hidden || !this.isVisible) {
+          requestAnimationFrame(() => this.animate());
+          return;
+        }
+
+        this.frame++;
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
         this.particles.forEach(p => {
@@ -225,13 +245,22 @@ I'm always eager to take on new challenges, collaborate with peers, and contribu
           this.drawParticle(p);
         });
         
-        this.drawConnections();
+        if (this.frame % 2 === 0) {
+          this.drawConnections();
+        }
         requestAnimationFrame(() => this.animate());
       }
     }
 
     // Initialize particles for all sections with particle-bg class
     document.addEventListener('DOMContentLoaded', () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.particle-canvas').forEach(canvas => {
+          canvas.style.display = 'none';
+        });
+        return;
+      }
+
       const particleSections = document.querySelectorAll('.particle-bg');
       particleSections.forEach(section => {
         new ParticleSection(section);

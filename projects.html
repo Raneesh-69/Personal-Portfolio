@@ -81,7 +81,7 @@
               <div class="project-links">
                 <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
                 <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-                <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+                <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
               </div>
 
               <div class="overlay">
@@ -106,12 +106,27 @@
             <div class="project-links">
               <a href="https://github.com/Raneesh-69/Face_Mask" target="_blank" class="btn github">GitHub</a>
               <a href="https://facemaskr.netlify.app//" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+              <button type="button" class="btn details project-details-btn" data-project-title="FaceMaskr - Face Mask Detection" data-project-details="A computer vision application that detects whether a person is wearing a face mask or not. Problem Statement: Help identify face mask compliance in real-time. Tech Stack: Python, TensorFlow, OpenCV, Keras, Flask. Features: Real-time webcam detection, image upload analysis, confidence score display. Dataset: Face Mask Detection Dataset, 11k+ labeled images. Model Approach: Convolutional Neural Network (CNN) with transfer learning. Metrics: 98% accuracy, 150ms inference per frame. Deployment: Netlify frontend, Python backend with Flask API.">Details</button>
             </div>>
 
             <div class="overlay">
               <h3>FaceMaskr</h3>
               <p>Mask vs No Mask computer vision demo</p>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <img src="img/Iris.png" alt="Iris Prediction">
+
+            <div class="project-links">
+              <a href="https://github.com/Raneesh-69/iris_pred" target="_blank" class="btn github">GitHub</a>
+              <a href="https://iris-pred-1.onrender.com/" target="_blank" class="btn live">Live Demo</a>
+              <button type="button" class="btn details project-details-btn" data-project-title="Iris Flower Classification" data-project-details="A machine learning classification project that predicts iris flower species based on sepal and petal measurements. Problem Statement: Classify iris flowers into three species (Setosa, Versicolor, Virginica). Tech Stack: Python, scikit-learn, Flask, HTML/CSS. Features: Interactive web interface, real-time predictions, input validation. Dataset: Classic Iris Dataset, 150 samples with 4 features. Model Approach: Logistic Regression, Random Forest, SVM comparison. Metrics: 96% accuracy on test set. Deployment: Live on Render platform with responsive UI.">Details</button>
+            </div>
+
+            <div class="overlay">
+              <h3>Iris Prediction</h3>
+              <p>ML Model classification</p>
             </div>
           </div>
            <div class="project-card">
@@ -120,7 +135,7 @@
             <div class="project-links">
               <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
               <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
             </div>
 
             <div class="overlay">
@@ -133,7 +148,7 @@
             <div class="project-links">
               <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
               <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
+              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
             </div>
 
             <div class="overlay">
@@ -217,13 +232,27 @@
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = 40;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        this.particleCount = isMobile ? 14 : 24;
+        this.isVisible = false;
+        this.frame = 0;
         
         this.resizeCanvas();
         window.addEventListener('resize', () => this.resizeCanvas());
+        this.setupVisibilityObserver();
         
         this.initParticles();
         this.animate();
+      }
+
+      setupVisibilityObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0]) {
+            this.isVisible = entries[0].isIntersecting;
+          }
+        }, { threshold: 0.05 });
+
+        observer.observe(this.section);
       }
 
       resizeCanvas() {
@@ -281,6 +310,12 @@
       }
 
       animate() {
+        if (document.hidden || !this.isVisible) {
+          requestAnimationFrame(() => this.animate());
+          return;
+        }
+
+        this.frame++;
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
         this.particles.forEach(p => {
@@ -288,13 +323,22 @@
           this.drawParticle(p);
         });
         
-        this.drawConnections();
+        if (this.frame % 2 === 0) {
+          this.drawConnections();
+        }
         requestAnimationFrame(() => this.animate());
       }
     }
 
     // Initialize particles for all sections with particle-bg class
     document.addEventListener('DOMContentLoaded', () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.particle-canvas').forEach(canvas => {
+          canvas.style.display = 'none';
+        });
+        return;
+      }
+
       const particleSections = document.querySelectorAll('.particle-bg');
       particleSections.forEach(section => {
         new ParticleSection(section);

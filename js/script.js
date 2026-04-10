@@ -15,7 +15,7 @@ if (!document.getElementById("scrollProgress")) {
     scrollProgress.style.width = `${progress}%`;
   };
 
-  window.addEventListener("scroll", updateScrollProgress);
+  window.addEventListener("scroll", updateScrollProgress, { passive: true });
   updateScrollProgress();
 }
 
@@ -179,5 +179,5 @@ if (btnBackToTop) {
   };
 
   btnBackToTop.addEventListener("click", backToTop);
-  window.addEventListener("scroll", toggleBtnBackToTop);
+  window.addEventListener("scroll", toggleBtnBackToTop, { passive: true });
 }

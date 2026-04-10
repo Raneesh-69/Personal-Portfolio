@@ -67,53 +67,40 @@
           <p class="para">I have earned various certifications in AI/ML, data science, and related technologies to enhance my professional skills and expertise.</p>
         </div>
         <div class="project-grid">
-         <div class="cert-card">
-  <img src="img/certif_1.jpg" alt="Generative AI">
+          <div class="cert-card">
+            <img src="img/certif_1.jpg" alt="Generative AI">
 
-  <div class="cert-overlay">
-    <h3>Generative AI for Beginners</h3>
-    <p>by Aakriti E-Learning Academy</p>
+            <div class="cert-overlay">
+              <h3>Generative AI for Beginners</h3>
+              <p>by Aakriti E-Learning Academy</p>
 
-    <div class="cert-links">
-      <a href="img/Certi_1.pdf"
-         target="_blank"
-         class="btn view">
-        View PDF
-      </a>
-    </div>
-  </div>
-</div> <div class="cert-card">
-  <img src="img/certif_1.jpg" alt="Generative AI">
+              <div class="cert-links">
+                <a href="img/Certi_1.pdf"
+                   target="_blank"
+                   class="btn view">
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
 
-  <div class="cert-overlay">
-    <h3>Generative AI for Beginners</h3>
-    <p>by Aakriti E-Learning Academy</p>
+          <div class="cert-card">
+            <img src="img/ML-Coursera.jpg" alt="Machine Learning Certificate">
 
-    <div class="cert-links">
-      <a href="img/Certi_1.pdf"
-         target="_blank"
-         class="btn view">
-        View PDF
-      </a>
-    </div>
-  </div>
-</div> <div class="cert-card">
-  <img src="img/certif_1.jpg" alt="Generative AI">
+            <div class="cert-overlay">
+              <h3>Machine Learning </h3>
+              <p>by Andrew Ng</p>
 
-  <div class="cert-overlay">
-    <h3>Generative AI for Beginners</h3>
-    <p>by Aakriti E-Learning Academy</p>
-
-    <div class="cert-links">
-      <a href="img/Certi_1.pdf"
-         target="_blank"
-         class="btn view">
-        View PDF
-      </a>
-    </div>
-  </div>
-</div>
-       </div>
+              <div class="cert-links">
+                <a href="img/ML%20-Coursera.pdf"
+                   target="_blank"
+                   class="btn view">
+                  View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
        
@@ -188,13 +175,27 @@
         
         this.ctx = this.canvas.getContext('2d');
         this.particles = [];
-        this.particleCount = 40;
+        const isMobile = window.matchMedia('(max-width: 768px)').matches;
+        this.particleCount = isMobile ? 14 : 24;
+        this.isVisible = false;
+        this.frame = 0;
         
         this.resizeCanvas();
         window.addEventListener('resize', () => this.resizeCanvas());
+        this.setupVisibilityObserver();
         
         this.initParticles();
         this.animate();
+      }
+
+      setupVisibilityObserver() {
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0]) {
+            this.isVisible = entries[0].isIntersecting;
+          }
+        }, { threshold: 0.05 });
+
+        observer.observe(this.section);
       }
 
       resizeCanvas() {
@@ -252,6 +253,12 @@
       }
 
       animate() {
+        if (document.hidden || !this.isVisible) {
+          requestAnimationFrame(() => this.animate());
+          return;
+        }
+
+        this.frame++;
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
         
         this.particles.forEach(p => {
@@ -259,13 +266,22 @@
           this.drawParticle(p);
         });
         
-        this.drawConnections();
+        if (this.frame % 2 === 0) {
+          this.drawConnections();
+        }
         requestAnimationFrame(() => this.animate());
       }
     }
 
     // Initialize particles for all sections with particle-bg class
     document.addEventListener('DOMContentLoaded', () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.querySelectorAll('.particle-canvas').forEach(canvas => {
+          canvas.style.display = 'none';
+        });
+        return;
+      }
+
       const particleSections = document.querySelectorAll('.particle-bg');
       particleSections.forEach(section => {
         new ParticleSection(section);
