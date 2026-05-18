@@ -429,6 +429,23 @@ document.addEventListener("DOMContentLoaded", () => {
     "Data Scientist",
     "Problem Solver",
     "Tech Innovator",
+    "Deep Learning Practitioner",
+    "Computer Vision Developer",
+    "NLP Engineer",
+    "Backend Developer",
+    "Full Stack Developer",
+    "Software Engineer",
+    "Open Source Contributor",
+    "Cloud Computing Enthusiast",
+    "DevOps Learner",
+    "Automation Engineer",
+    "Data Analyst",
+    "Tech Explorer",
+    "Algorithm Designer",
+    "Competitive Programmer",
+    "UI/UX Learner",
+    "Startup Enthusiast",
+    "Innovation Seeker",
   ];
 
   const roleElement = document.querySelector(".slogun");
