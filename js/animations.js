@@ -2,13 +2,7 @@
 // 🎬 HERO TYPING EFFECT - Premium Intro Animation
 // ======================================================================
 class TypeWriter {
-  constructor(
-    elementId,
-    strings,
-    speed = 80,
-    deleteSpeed = 40,
-    delayBetween = 2000,
-  ) {
+  constructor(elementId, strings, speed = 80, deleteSpeed = 40, delayBetween = 2000) {
     this.element = document.getElementById(elementId);
     this.strings = strings;
     this.speed = speed;
@@ -115,7 +109,7 @@ class CustomCursor {
     document.addEventListener("mouseover", (e) => {
       if (
         e.target.matches(
-          "a, button, .project-card, .cert-card, .skill, .service, .dark-mode-toggle",
+          "a, button, .project-card, .cert-card, .skill, .service, .dark-mode-toggle"
         )
       ) {
         this.isActive = true;
@@ -126,7 +120,7 @@ class CustomCursor {
     document.addEventListener("mouseout", (e) => {
       if (
         e.target.matches(
-          "a, button, .project-card, .cert-card, .skill, .service, .dark-mode-toggle",
+          "a, button, .project-card, .cert-card, .skill, .service, .dark-mode-toggle"
         )
       ) {
         this.isActive = false;
@@ -278,15 +272,13 @@ class FloatingImage {
 // ======================================================================
 class RevealOnScroll {
   constructor() {
-    this.prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.init();
   }
 
   init() {
     const targets = document.querySelectorAll(
-      ".project-card, .cert-card, .service-section, .items, .contact-section, .About-section",
+      ".project-card, .cert-card, .service-section, .items, .contact-section, .About-section"
     );
 
     if (!targets.length) return;
@@ -310,7 +302,7 @@ class RevealOnScroll {
         root: null,
         threshold: 0.15,
         rootMargin: "0px 0px -40px 0px",
-      },
+      }
     );
 
     targets.forEach((el, index) => {
@@ -325,17 +317,14 @@ class RevealOnScroll {
 // ======================================================================
 class MagneticButtons {
   constructor() {
-    this.prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.isTouch = window.matchMedia("(hover: none)").matches;
     this.buttons = document.querySelectorAll(".homeBtn, .my-cv, .btn, .button");
     this.init();
   }
 
   init() {
-    if (!this.buttons.length || this.prefersReducedMotion || this.isTouch)
-      return;
+    if (!this.buttons.length || this.prefersReducedMotion || this.isTouch) return;
 
     this.buttons.forEach((button) => {
       button.addEventListener("mousemove", (event) => {
@@ -358,13 +347,9 @@ class MagneticButtons {
 // ======================================================================
 class CardTilt {
   constructor() {
-    this.prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.isTouch = window.matchMedia("(hover: none)").matches;
-    this.cards = document.querySelectorAll(
-      ".project-card, .cert-card, .service-section, .items",
-    );
+    this.cards = document.querySelectorAll(".project-card, .cert-card, .service-section, .items");
     this.init();
   }
 
@@ -385,8 +370,7 @@ class CardTilt {
       });
 
       card.addEventListener("mouseleave", () => {
-        card.style.transform =
-          "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
+        card.style.transform = "perspective(1000px) rotateX(0) rotateY(0) translateY(0)";
       });
     });
   }
@@ -397,9 +381,7 @@ class CardTilt {
 // ======================================================================
 class SectionAmbientGlow {
   constructor() {
-    this.prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.init();
   }
 
@@ -407,8 +389,7 @@ class SectionAmbientGlow {
     if (this.prefersReducedMotion) return;
 
     const update = () => {
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight || 1;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight || 1;
       const progress = window.scrollY / docHeight;
       document.body.style.setProperty("--scroll-progress", progress.toFixed(4));
     };

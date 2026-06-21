@@ -9,8 +9,7 @@ if (!document.getElementById("scrollProgress")) {
 
   const updateScrollProgress = () => {
     const scrollTop = window.scrollY;
-    const scrollHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
     scrollProgress.style.width = `${progress}%`;
   };
@@ -21,7 +20,7 @@ if (!document.getElementById("scrollProgress")) {
 
 if (window.AOS) {
   const animatedElements = document.querySelectorAll(
-    ".section, .project-card, .cert-card, .pricing-plans .card, .skill, .service, .contact-section",
+    ".section, .project-card, .cert-card, .pricing-plans .card, .skill, .service, .contact-section"
   );
 
   animatedElements.forEach((element, index) => {
@@ -62,12 +61,8 @@ if (projectCards.length > 0) {
     document.body.appendChild(projectDetailsModal);
   }
 
-  const projectDetailsTitle = projectDetailsModal.querySelector(
-    "#projectDetailsTitle",
-  );
-  const projectDetailsText = projectDetailsModal.querySelector(
-    "#projectDetailsText",
-  );
+  const projectDetailsTitle = projectDetailsModal.querySelector("#projectDetailsTitle");
+  const projectDetailsText = projectDetailsModal.querySelector("#projectDetailsText");
 
   const openProjectDetails = (title, details) => {
     projectDetailsTitle.textContent = title;
@@ -87,8 +82,7 @@ if (projectCards.length > 0) {
     button.addEventListener("click", () => {
       const projectCard = button.closest(".project-card");
       const overlayTitle =
-        projectCard?.querySelector(".overlay h3")?.textContent?.trim() ||
-        "Project Details";
+        projectCard?.querySelector(".overlay h3")?.textContent?.trim() || "Project Details";
       const overlaySummary =
         projectCard?.querySelector(".overlay p")?.textContent?.trim() ||
         "Project information is available for this project.";
@@ -96,22 +90,17 @@ if (projectCards.length > 0) {
       openProjectDetails(
         button.dataset.projectTitle || overlayTitle,
         button.dataset.projectDetails ||
-          `${overlaySummary} This project includes full implementation details, features, workflow, and technical highlights.`,
+          `${overlaySummary} This project includes full implementation details, features, workflow, and technical highlights.`
       );
     });
   });
 
-  projectDetailsModal
-    .querySelectorAll("[data-close-project-details]")
-    .forEach((closeElement) => {
-      closeElement.addEventListener("click", closeProjectDetails);
-    });
+  projectDetailsModal.querySelectorAll("[data-close-project-details]").forEach((closeElement) => {
+    closeElement.addEventListener("click", closeProjectDetails);
+  });
 
   document.addEventListener("keydown", (event) => {
-    if (
-      event.key === "Escape" &&
-      projectDetailsModal.classList.contains("is-open")
-    ) {
+    if (event.key === "Escape" && projectDetailsModal.classList.contains("is-open")) {
       closeProjectDetails();
     }
   });

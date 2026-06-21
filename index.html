@@ -1,316 +1,475 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./Favicon/site.webmanifest" />
+    <!-- bootstrap css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="./Favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./Favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./Favicon/favicon-16x16.png">
-  <link rel="manifest" href="./Favicon/site.webmanifest">
-  <!-- bootstrap css -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- title -->
+    <title>Pitamber Raneesh Joga | Student Portfolio</title>
+  </head>
 
-  <!-- fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito&family=Satisfy&display=swap"
-    rel="stylesheet">
-  <!-- my css -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- AOS Animation Library -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- title -->
-  <title>Pitamber Raneesh Joga | Student Portfolio</title>
-</head>
-
-<body>
-  <!-- navbar -->
-  <main-header>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Raneesh</a>
-        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="toggler-icon top-bar"></span>
-          <span class="toggler-icon middle-bar"></span>
-          <span class="toggler-icon bottom-bar"></span>
-        </button>
-        <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active p-4" aria-current="page" href="index.html">Home</a>
-            </li>
-            <a class="nav-link p-4" aria-current="page" href="about.html">About</a>
-            </li>
-            <a class="nav-link p-4" aria-current="page" href="projects.html">Projects</a>
-            </li>
-            <a class="nav-link p-4" aria-current="page" href="certifications.html">Certifications</a>
-            </li>             
-          </ul>
-         <a href="cv/Pitamber_Joga_Resume.pdf" target="_blank" rel="noopener noreferrer" class="my-cv">Download CV</a>
+  <body>
+    <!-- navbar -->
+    <main-header>
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Raneesh</a>
+          <button
+            class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active p-4" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-4" aria-current="page" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-4" aria-current="page" href="projects.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-4" aria-current="page" href="certifications.html"
+                  >Certifications</a
+                >
+              </li>
+            </ul>
+            <a
+              href="cv/Pitamber_Joga_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="my-cv"
+              >Download CV</a
+            >
+          </div>
         </div>
-      </div>
       </nav>
-  </main-header>
+    </main-header>
 
-  <!-- hero section -->
-  <div class="first-section" id="hero">
-    <canvas id="particleCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
+    <!-- hero section -->
+    <div class="first-section" id="hero">
+      <canvas
+        id="particleCanvas"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+      ></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="intro">
+              <p class="title">-INTRODUCTION</p>
+              <p class="hi">Hi There!👋</p>
+              <h1 class="my-name">I'm <span>Pitamber Raneesh Joga</span></h1>
+              <p class="slogun" style="min-height: 1.8rem">
+                <span id="typing-role">AI/ML Enthusiast</span>
+              </p>
 
-      <div class="row justify-content-center">
+              <a href="#connectMe" class="homeBtn">Let's Connect!</a>
+              <div class="social-media">
+                <a href="https://www.linkedin.com/in/pitamber-joga-79656a351/" target="_blank"
+                  ><img src="./img/LinkedIn Circled.png" alt="linkedin"
+                /></a>
+                <a href="https://www.kaggle.com/pitamberraneeshjoga" target="_blank">
+                  <img src="img/kaggle-icon.png" alt="kaggle"
+                /></a>
+                <a href="https://github.com/Raneesh-69" target="_blank"
+                  ><img src="./img/GitHub.png" alt="github"
+                /></a>
+                <a href="https://www.instagram.com/raneesh_joga/" target="_blank"
+                  ><img src="./img/Instagram.png" alt="instagram"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 pb-0 img">
+            <img src="img/pitamber-avatar.png" alt="AI/ML Student" srcset="" />
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="col-md-6">
-          <div class="intro">
-            <p class="title">-INTRODUCTION</p>
-            <p class="hi">Hi There!👋</p>
-            <h1 class="my-name">I'm <span>Pitamber Raneesh Joga</span></h1>
-            <p class="slogun" style="min-height: 1.8rem;">
-              <span id="typing-role">AI/ML Enthusiast</span>
+    <!-- projects -->
+
+    <div class="section particle-bg home-feature-sync" data-aos="fade-up" data-aos-duration="1000">
+      <canvas class="particle-canvas"></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <p class="title">-PROJECTS</p>
+        <div class="project-section" data-aos="fade-up" data-aos-delay="200">
+          <h2>PROJECTS</h2>
+          <p class="para">
+            I organize my work into advanced projects that highlight deeper technical work and
+            normal projects that cover practical builds, experiments, and smaller applications.
+          </p>
+        </div>
+
+        <div class="project-category">
+          <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
+            <p class="title">-ADVANCED PROJECTS</p>
+            <h3>Main portfolio work</h3>
+            <p class="para">
+              These are the flagship projects that show my strongest problem-solving, architecture,
+              and implementation skills.
             </p>
-
-            <a href="#connectMe" class="homeBtn">Let's Connect!</a>
-            <div class="social-media">
-              <a href="https://www.linkedin.com/in/pitamber-joga-79656a351/" target="_blank"><img src="./img/LinkedIn Circled.png" alt="linkedin"></a>
-              <a href="https://www.kaggle.com/pitamberraneeshjoga" target="_blank"> <img src="img/kaggle-icon.png" alt="kaggle"></a>
-              <a href="https://github.com/Raneesh-69" target="_blank"><img src="./img/GitHub.png" alt="github"></a>
-              <a href="https://www.instagram.com/raneesh_joga/" target="_blank"><img src="./img/Instagram.png" alt="instagram"></a>
-            </div>
           </div>
 
-        </div>
-         <div class="col-md-6 pb-0 img">
-          <img src="img/pitamber-avatar.png" alt="AI/ML Student" srcset="">
-        </div>
-      </div>
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
 
-    </div>
-  </div>
-  
-  <!-- projects -->
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Robot Automation System"
+                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
+                >
+                  Details
+                </button>
+              </div>
 
-  <div class="section particle-bg home-feature-sync" data-aos="fade-up" data-aos-duration="1000">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
-      <p class="title">-PROJECTS</p>
-      <div class="project-section" data-aos="fade-up" data-aos-delay="200">
-        <h2>PROJECTS</h2>
-        <p class="para">I organize my work into advanced projects that highlight deeper technical work and normal projects that cover practical builds, experiments, and smaller applications.</p>
-      </div>
-
-      <div class="project-category">
-        <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
-          <p class="title">-ADVANCED PROJECTS</p>
-          <h3>Main portfolio work</h3>
-          <p class="para">These are the flagship projects that show my strongest problem-solving, architecture, and implementation skills.</p>
-        </div>
-
-        <div class="project-grid">
-          <div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-<div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-<div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-
-
-          <div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Robot Automation System" data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-category project-category-secondary">
-        <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
-          <p class="title">-NORMAL PROJECTS</p>
-          <h3>Additional builds</h3>
-          <p class="para">These projects are smaller, practical, or experimental pieces that still show consistency and range.</p>
-        </div>
-
-        <div class="project-grid">
-          <div class="project-card">
-            <img src="img/MaskVsnomask.png" alt="FaceMaskr web app preview">
-
-            <div class="project-links">
-              <a href="https://github.com/Raneesh-69/Face_Mask" target="_blank" class="btn github">GitHub</a>
-              <a href="https://facemaskr.netlify.app//" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Face Mask Detection System (Computer Vision Project)" data-project-details="1) Project Title: Face Mask Detection System (Computer Vision Project)&#10;2) 1-line Description: End-to-end computer vision project that detects whether a person is wearing a face mask using deep learning.&#10;3) Problem Statement: Monitoring mask usage manually is inefficient and error-prone, especially in crowded public places.&#10;4) What It Does (Features): Detects faces in images; Classifies mask vs no-mask; Works with uploaded images (no webcam dependency); Provides real-time prediction output; Simple UI for easy usage.&#10;5) Tech Stack: Python, NumPy, Pandas, TensorFlow/Keras, OpenCV, Flask/Streamlit; Deployment: Render/Local.&#10;6) Dataset: Face Mask Detection Dataset; Source: Kaggle Face Mask Dataset.&#10;7) Model / Approach: Image preprocessing and resizing; Face detection using OpenCV; CNN model for classification; Trained on mask/no-mask images; Prediction based on trained weights.&#10;8) Results (Metrics): Accuracy around 90-95% (typical for this model); Loss minimized after training epochs; Update with exact values if available.&#10;9) Screenshots / Demo: Upload image interface; Prediction output (Mask / No Mask).&#10;10) Links: GitHub Repo: https://github.com/Raneesh-69/Face_Mask ; Live Demo: Add if deployed ; Dataset: Kaggle Face Mask Dataset.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>FaceMaskr</h3>
-              <p>Mask vs No Mask computer vision </p>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <img src="img/Iris.png" alt="Iris Prediction">
-
-            <div class="project-links">
-              <a href="https://github.com/Raneesh-69/iris_pred" target="_blank" class="btn github">GitHub</a>
-              <a href="https://iris-pred-1.onrender.com/" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Iris Flower Prediction System (ML Classification App)" data-project-details="1) Project Title: Iris Flower Prediction System (ML Classification App)&#10;2) 1-line Description: Machine learning model that predicts iris flower species based on input features with a simple web interface.&#10;3) Problem Statement: Classifying iris species manually based on measurements is time-consuming and prone to errors.&#10;4) What It Does (Features): Takes input sepal length, sepal width, petal length, and petal width; Predicts iris species (Setosa, Versicolor, Virginica); Fast and accurate classification; User-friendly interface; Works on browser.&#10;5) Tech Stack: Python, Pandas, NumPy, Scikit-learn, Flask/Streamlit, HTML/CSS (if UI used); Deployment: Render/Local.&#10;6) Dataset: Iris Dataset; Source: UCI Machine Learning Repository / Scikit-learn built-in dataset.&#10;7) Model / Approach: Data preprocessing; Feature selection (4 main features); Models tried Logistic Regression, Decision Tree, Random Forest; Best model selected based on accuracy; Final prediction system built.&#10;8) Results (Metrics): Accuracy around 95-100%; Very low error due to simple dataset; Update exact values if available.&#10;9) Screenshots / Demo: Input form UI; Prediction result output.&#10;10) Links: GitHub Repo: https://github.com/Raneesh-69/iris_pred ; Live Demo: Add if deployed ; Dataset: UCI Iris Dataset.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Iris Prediction</h3>
-              <p>ML Model classification</p>
-            </div>
-          </div>
-<div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-<div class="project-card">
-            <img src="img/project01.jpg" alt="Robot Automation">
-
-            <div class="project-links">
-              <a href="https://github.com/yourusername/project-repo" target="_blank" class="btn github">GitHub</a>
-              <a href="https://your-live-demo-link.com" target="_blank" class="btn live">Live Demo</a>
-              <button type="button" class="btn details project-details-btn" data-project-title="Project Title Placeholder" data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links.">Details</button>
-            </div>
-
-            <div class="overlay">
-              <h3>Robot Automation</h3>
-              <p>AI-powered robot project</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      </div>
-    </div>
-  </div>
- 
-
-  <!-- certifications -->
-
-  <div class="section particle-bg home-feature-sync" data-aos="fade-up" data-aos-duration="1000">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
-      <p class="title">-CERTIFICATIONS</p>
-      <div class="project-section" data-aos="fade-up" data-aos-delay="200">
-        <h2>MY CERTIFICATIONS</h2>
-        <p class="para">I have earned various certifications in AI/ML, data science, and related technologies to enhance my professional skills and expertise.</p>
-      </div>
-      <div class="project-category">
-        <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
-          <p class="title">-MAIN CERTIFICATES</p>
-          <h3>Primary certifications</h3>
-          <p class="para">Key certifications that represent my core expertise and credibility.</p>
-        </div>
-
-        <div class="project-grid">
-          <div class="cert-card">
-            <img src="img\\ML-Coursera.jpg" alt="Machine Learning Certificate">
-            <div class="cert-overlay">
-              <h3>Machine Learning</h3>
-              <p>by Andrew Ng</p>
-              <div class="cert-links">
-                <a href="img/ML%20-Coursera.pdf" target="_blank" class="btn view">View Certificate</a>
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
               </div>
             </div>
-          </div>
 
-          <div class="cert-card">
-            <img src="img/Be10x png.png" alt="Be10x">
-            <div class="cert-overlay">
-              <h3>AI Tools Workshop</h3>
-              <p>by Be10x Official</p>
-              <div class="cert-links">
-                <a href="img/Be10x pdf.pdf" target="_blank" class="btn view">View Certificate</a>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Robot Automation System"
+                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Robot Automation System"
+                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Robot Automation System"
+                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Robot Automation System"
+                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-category project-category-secondary">
-        <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
-          <p class="title">-ADDITIONAL CERTIFICATES</p>
-          <h3>Other certifications</h3>
-          <p class="para">Supplementary workshops and short courses.</p>
+        <div class="project-category project-category-secondary">
+          <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
+            <p class="title">-NORMAL PROJECTS</p>
+            <h3>Additional builds</h3>
+            <p class="para">
+              These projects are smaller, practical, or experimental pieces that still show
+              consistency and range.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <div class="project-card">
+              <img src="img/MaskVsnomask.png" alt="FaceMaskr web app preview" />
+
+              <div class="project-links">
+                <a href="https://github.com/Raneesh-69/Face_Mask" target="_blank" class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://facemaskr.netlify.app//" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Face Mask Detection System (Computer Vision Project)"
+                  data-project-details="1) Project Title: Face Mask Detection System (Computer Vision Project)&#10;2) 1-line Description: End-to-end computer vision project that detects whether a person is wearing a face mask using deep learning.&#10;3) Problem Statement: Monitoring mask usage manually is inefficient and error-prone, especially in crowded public places.&#10;4) What It Does (Features): Detects faces in images; Classifies mask vs no-mask; Works with uploaded images (no webcam dependency); Provides real-time prediction output; Simple UI for easy usage.&#10;5) Tech Stack: Python, NumPy, Pandas, TensorFlow/Keras, OpenCV, Flask/Streamlit; Deployment: Render/Local.&#10;6) Dataset: Face Mask Detection Dataset; Source: Kaggle Face Mask Dataset.&#10;7) Model / Approach: Image preprocessing and resizing; Face detection using OpenCV; CNN model for classification; Trained on mask/no-mask images; Prediction based on trained weights.&#10;8) Results (Metrics): Accuracy around 90-95% (typical for this model); Loss minimized after training epochs; Update with exact values if available.&#10;9) Screenshots / Demo: Upload image interface; Prediction output (Mask / No Mask).&#10;10) Links: GitHub Repo: https://github.com/Raneesh-69/Face_Mask ; Live Demo: Add if deployed ; Dataset: Kaggle Face Mask Dataset."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>FaceMaskr</h3>
+                <p>Mask vs No Mask computer vision</p>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <img src="img/Iris.png" alt="Iris Prediction" />
+
+              <div class="project-links">
+                <a href="https://github.com/Raneesh-69/iris_pred" target="_blank" class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://iris-pred-1.onrender.com/" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Iris Flower Prediction System (ML Classification App)"
+                  data-project-details="1) Project Title: Iris Flower Prediction System (ML Classification App)&#10;2) 1-line Description: Machine learning model that predicts iris flower species based on input features with a simple web interface.&#10;3) Problem Statement: Classifying iris species manually based on measurements is time-consuming and prone to errors.&#10;4) What It Does (Features): Takes input sepal length, sepal width, petal length, and petal width; Predicts iris species (Setosa, Versicolor, Virginica); Fast and accurate classification; User-friendly interface; Works on browser.&#10;5) Tech Stack: Python, Pandas, NumPy, Scikit-learn, Flask/Streamlit, HTML/CSS (if UI used); Deployment: Render/Local.&#10;6) Dataset: Iris Dataset; Source: UCI Machine Learning Repository / Scikit-learn built-in dataset.&#10;7) Model / Approach: Data preprocessing; Feature selection (4 main features); Models tried Logistic Regression, Decision Tree, Random Forest; Best model selected based on accuracy; Final prediction system built.&#10;8) Results (Metrics): Accuracy around 95-100%; Very low error due to simple dataset; Update exact values if available.&#10;9) Screenshots / Demo: Input form UI; Prediction result output.&#10;10) Links: GitHub Repo: https://github.com/Raneesh-69/iris_pred ; Live Demo: Add if deployed ; Dataset: UCI Iris Dataset."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Iris Prediction</h3>
+                <p>ML Model classification</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Project Title Placeholder"
+                  data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Project Title Placeholder"
+                  data-project-details="Project details placeholder. Add full project description, problem statement, features, tech stack, dataset, model approach, metrics, screenshots/demo, and links."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- certifications -->
+
+    <div class="section particle-bg home-feature-sync" data-aos="fade-up" data-aos-duration="1000">
+      <canvas class="particle-canvas"></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <p class="title">-CERTIFICATIONS</p>
+        <div class="project-section" data-aos="fade-up" data-aos-delay="200">
+          <h2>MY CERTIFICATIONS</h2>
+          <p class="para">
+            I have earned various certifications in AI/ML, data science, and related technologies to
+            enhance my professional skills and expertise.
+          </p>
+        </div>
+        <div class="project-category">
+          <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
+            <p class="title">-MAIN CERTIFICATES</p>
+            <h3>Primary certifications</h3>
+            <p class="para">Key certifications that represent my core expertise and credibility.</p>
+          </div>
+
+          <div class="project-grid">
+            <div class="cert-card">
+              <img src="img\\ML-Coursera.jpg" alt="Machine Learning Certificate" />
+              <div class="cert-overlay">
+                <h3>Machine Learning</h3>
+                <p>by Andrew Ng</p>
+                <div class="cert-links">
+                  <a href="img/ML%20-Coursera.pdf" target="_blank" class="btn view"
+                    >View Certificate</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <img src="img/Be10x png.png" alt="Be10x" />
+              <div class="cert-overlay">
+                <h3>AI Tools Workshop</h3>
+                <p>by Be10x Official</p>
+                <div class="cert-links">
+                  <a href="img/Be10x pdf.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="project-grid">
-        
-           <div class="cert-card">
-              <img src="img/Dotnetpic.png" alt=".Net Certificate">
+        <div class="project-category project-category-secondary">
+          <div class="project-category-heading" data-aos="fade-up" data-aos-delay="250">
+            <p class="title">-ADDITIONAL CERTIFICATES</p>
+            <h3>Other certifications</h3>
+            <p class="para">Supplementary workshops and short courses.</p>
+          </div>
+
+          <div class="project-grid">
+            <div class="cert-card">
+              <img src="img/Dotnetpic.png" alt=".Net Certificate" />
               <div class="cert-overlay">
                 <h3>.Net Certificate</h3>
                 <p>by Microsoft</p>
@@ -318,36 +477,45 @@
                   <a href="img/Dotnetpdf.pdf" target="_blank" class="btn view">View Certificate</a>
                 </div>
               </div>
-            </div> <div class="cert-card">
-              <img src="img/kaggle-into the programming.png" alt="Kaggle Certificate">
+            </div>
+            <div class="cert-card">
+              <img src="img/kaggle-into the programming.png" alt="Kaggle Certificate" />
               <div class="cert-overlay">
                 <h3>Kaggle Certificate</h3>
                 <p>by Kaggle</p>
                 <div class="cert-links">
-                  <a href="img/kaggle-into%20the%20progammi.pdf" target="_blank" class="btn view">View Certificate</a>
+                  <a href="img/kaggle-into%20the%20progammi.pdf" target="_blank" class="btn view"
+                    >View Certificate</a
+                  >
                 </div>
               </div>
-            </div> <div class="cert-card">
-              <img src="img/intro to ml -kaggle.png" alt="Kaggle Certificate">
+            </div>
+            <div class="cert-card">
+              <img src="img/intro to ml -kaggle.png" alt="Kaggle Certificate" />
               <div class="cert-overlay">
                 <h3>Kaggle Certificate</h3>
                 <p>by Kaggle</p>
                 <div class="cert-links">
-                  <a href="img/intro to ml -kaggle pdf.pdf" target="_blank" class="btn view">View Certificate</a>
+                  <a href="img/intro to ml -kaggle pdf.pdf" target="_blank" class="btn view"
+                    >View Certificate</a
+                  >
                 </div>
               </div>
-            </div> 
-             <div class="cert-card">
-              <img src="img/Kaggle-Python.png" alt="Kaggle">
+            </div>
+            <div class="cert-card">
+              <img src="img/Kaggle-Python.png" alt="Kaggle" />
               <div class="cert-overlay">
                 <h3>Python Certification</h3>
                 <p>by Kaggle</p>
                 <div class="cert-links">
-                  <a href="img/Kaggle-python pdf.pdf" target="_blank" class="btn view">View Certificate</a>
+                  <a href="img/Kaggle-python pdf.pdf" target="_blank" class="btn view"
+                    >View Certificate</a
+                  >
                 </div>
               </div>
-            </div><div class="cert-card">
-              <img src="img/claude-1 pic.png" alt="Claude Certificate">
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-1 pic.png" alt="Claude Certificate" />
               <div class="cert-overlay">
                 <h3>Claude Certificate</h3>
                 <p>by Anthropic</p>
@@ -355,8 +523,9 @@
                   <a href="img/claude-1.pdf" target="_blank" class="btn view">View Certificate</a>
                 </div>
               </div>
-            </div> <div class="cert-card">
-              <img src="img/claude-2 pic.png" alt="Claude Certificate">
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-2 pic.png" alt="Claude Certificate" />
               <div class="cert-overlay">
                 <h3>Claude Certificate</h3>
                 <p>by Anthropic</p>
@@ -364,19 +533,32 @@
                   <a href="img/claude-2.pdf" target="_blank" class="btn view">View Certificate</a>
                 </div>
               </div>
-            </div> <div class="cert-card">
-              <img src="img/claude-3 pic.png" alt="Claude Certificate">
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-3 pic.png" alt="Claude Certificate" />
               <div class="cert-overlay">
                 <h3>Claude Certificate</h3>
                 <p>by Anthropic</p>
                 <div class="cert-links">
-                  <a href="img/claude-3 pdf.pdf" target="_blank" class="btn view">View Certificate</a>
+                  <a href="img/claude-3 pdf.pdf" target="_blank" class="btn view"
+                    >View Certificate</a
+                  >
                 </div>
               </div>
             </div>
-            
             <div class="cert-card">
-              <img src="img/certif_1.jpg" alt="Generative AI Certificate">
+              <img src="img/claude-4.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-4.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <img src="img/certif_1.jpg" alt="Generative AI Certificate" />
               <div class="cert-overlay">
                 <h3>Generative AI Certificate</h3>
                 <p>by OpenCV (Udemy)</p>
@@ -385,557 +567,646 @@
                 </div>
               </div>
             </div>
-           
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- services -->
-
-  <div class="section particle-bg bg" data-aos="fade-up" data-aos-duration="1000">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
-      <p class="title">-SERVICES</p>
-      <div class="project-section" data-aos="fade-up" data-aos-delay="200">
-        <h2>SERVICES I PROVIDE</h2>
-        <p class="para">I provide AI and machine learning solutions designed to transform data into actionable insights and drive business growth.</p>
-      </div>
-      <div class="services">
-
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/ml.png" alt="Machine Learning">
-            <h3>Machine Learning</h3>
-            <p>I build and train machine learning models for classification, regression, and clustering problems. I specialize in developing predictive models and deep learning solutions.</p>
-          </div>
-
-        </div>
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/data-analysis.png" alt="Data Analysis">
-            <h3>Data Analysis & Visualization</h3>
-            <p>I perform exploratory data analysis, create visualizations, and extract meaningful insights from complex datasets. I use statistical methods to uncover patterns and trends.</p>
-          </div>
-
-        </div>
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/nlp.avif" alt="NLP Solutions">
-            <h3>Natural Language Processing</h3>
-            <p>I develop NLP solutions for text analysis, sentiment analysis, and language understanding tasks. I work with transformer models and deep learning architectures.</p>
-          </div>
-        </div>
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/computer-vision.png" alt="Computer Vision">
-            <h3>Computer Vision</h3>
-            <p>I develop computer vision applications for image classification, object detection, and image processing tasks. I work with CNN architectures and modern vision libraries.</p>
-          </div>
-        </div>
-
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/deep-learning.webp" alt="Deep Learning">
-            <h3>Deep Learning</h3>
-            <p>I develop neural networks including CNNs, RNNs, and transformers for complex pattern recognition tasks. I implement advanced architectures for state-of-the-art AI solutions.</p>
-          </div>
-
-        </div>
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/fullstack.jpg" alt="Full Stack ">
-            <h3>Full Stack ML Development</h3>
-            <p>Building complete web applications from frontend to backend with database integration and cloud deployment.Responsive Web Application Development.Third-Party API Integration.Cloud Deployment & Hosting</p>
-          </div>
-
-        </div>
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/aws.png" alt="Time Series">
-            <h3>AWS Cloud Computing and DevOps Engineering</h3>
-            <p>I provide AWS cloud computing services focused on building scalable, secure, and cost-effective cloud solutions.I offer DevOps services aimed at automating development and deployment workflows to improve speed, reliability, and collaboration.</p>
-          </div>
-        </div>
-        <div class="service-section">
-          <div class="service">
-            <img src="./img/data-eng.png" alt="Data Engineering">
-            <h3>Data Engineering & ETL</h3>
-            <p>I design and implement data pipelines, ETL processes, and data warehousing solutions. I work with SQL, Python, and big data tools to manage and process large-scale data efficiently.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- skills -->
-
-  <div class="section particle-bg" data-aos="fade-up" data-aos-duration="1000">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
-      <p class="title">-SKILLS</p>
-      <div class="skill-section" data-aos="fade-up" data-aos-delay="200">
-
-        <h2>AREA OF EXPERTISE</h2>
-        <p class="para">My technical skills span across machine learning, data science, and AI. I'm proficient in multiple tools and frameworks to deliver cutting-edge solutions.</p>
-      </div>
-      <div class="skills">
-        <div class="skill border1 border_right">
-          <div class="items">
-            <img src="./img/html.png" alt="">
-            <p>HTML</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="./img/css.png" alt="">
-            <p>CSS</p>
-          </div>
-        </div>
-        <div class="skill border1 border3">
-          <div class="items">
-            <img src="./img/javascript (1).png" alt="">
-            <p>JAVASCRIPT</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="./img/Bootstrap 1.png" alt="">
-            <p>BOOTSTRAP</p>
-          </div>
-        </div>
-        <div class="skill border1 border_right">
-          <div class="items">
-            <img src="./img/node-js.png" alt="">
-            <p>Node.js</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="./img/react (2).png" alt="">
-            <p>React</p>
-          </div>
-        </div>
-        <div class="skill border1 border_right border7">
-          <div class="items">
-            <img src="./img/git (2).png" alt="">
-            <p>Git</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="./img/github (7).png" alt="">
-            <p>GitHub</p>
-          </div>
-        </div>
-        <div class="skill border1 border_right">
-          <div class="items">
-            <img src="./img/python.png" alt="">
-            <p>Python</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="./img/ml.png" alt="">
-            <p>Machine Learning</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="./img/deep-learning.webp" alt="Deep Learning icon">
-            <p>Deep Learning</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png" alt="MS Excel icon">
-            <p>MS Excel</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C language icon">
-            <p>C</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ icon">
-            <p>C++</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" alt="OpenCV icon">
-            <p>OpenCV</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go language icon">
-            <p>Go Lang</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://img.icons8.com/color/96/artificial-intelligence.png" alt="Generative AI icon">
-            <p>Gen AI</p>
-          </div>
-        </div>
-        <div class="skill border1">
-          <div class="items">
-            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712139.png" alt="AI Tools icon">
-            <p>AI Tools</p>
-          </div>
-        </div>
-        
-  </div>
-  <!-- connect me -->
-  <div class="section particle-bg">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid bg rounded text-center pb-5 pos-relative" style="position: relative; z-index: 1;">
-      <img src="./img/Rocket1.png" alt="">
-      <h1 class="custom-h1">HAVE A PROJECT IN MIND?</h1>
-      <p class="para p-4">Turn your dream website into reality with us. Let's get started!</p>
-      
-
-
-      <a href="mailto:prjoga9@gmail.com" class="homeBtn">Let’s create an awesome website</a>
-
-
-    </div>
-  </div>
-  <!-- about me -->
-  <div class="section particle-bg home-feature-sync">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
-      <p class="title">-ABOUT</p>
-      <div class="About-section">
-        <h2>ABOUT ME</h2>
-        <div class="row img-sec">
-          <div class="col-md-6">
-            <p class="para">
-              I'm Raneesh, an AI/ML student with a passion for artificial intelligence and machine learning. I'm enthusiastic about using data-driven approaches to solve complex problems and create intelligent solutions. My expertise lies in machine learning, deep learning, data analysis, and natural language processing.
-              <br> <br>
-              I develop ML models using Python, TensorFlow, and PyTorch. I have strong skills in data manipulation with Pandas, visualization with Matplotlib, and implementing computer vision solutions with OpenCV.
-              <br> <br>
-              
-
-            </p>
-            <br>
-            <a href="" class="homeBtn">HIRE ME</a>
-
-            <a href="cv/Pitamber_Joga_Resume.pdf" target="_blank" rel="noopener noreferrer" class="my-cv">Download CV</a>
-
-          </div>
-          <div class="col-md-6 img-sec text-center">
-            <img src="./img/pitamber-avatar1.png" class="img-fluid" alt="AI/ML Student">
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- connect me -->
-  <div id="connectMe" class="section particle-bg">
-    <canvas class="particle-canvas"></canvas>
-    <div class="container-fluid" style="position: relative; z-index: 1;">
-      <p class="title">-CONTACT</p>
-      <div class="contact-section">
-        <h2>GET IN TOUCH</h2>
-        <p class="para">I'm here and ready to bring your project ideas to life. Just a click away!</p>
-        <div class="row img-sec justify-content-center">
-          <div class="col-md-6">
+
+    <!-- services -->
+
+    <div class="section particle-bg bg" data-aos="fade-up" data-aos-duration="1000">
+      <canvas class="particle-canvas"></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <p class="title">-SERVICES</p>
+        <div class="project-section" data-aos="fade-up" data-aos-delay="200">
+          <h2>SERVICES I PROVIDE</h2>
+          <p class="para">
+            I provide AI and machine learning solutions designed to transform data into actionable
+            insights and drive business growth.
+          </p>
+        </div>
+        <div class="services">
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/ml.png" alt="Machine Learning" />
+              <h3>Machine Learning</h3>
+              <p>
+                I build and train machine learning models for classification, regression, and
+                clustering problems. I specialize in developing predictive models and deep learning
+                solutions.
+              </p>
+            </div>
+          </div>
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/data-analysis.png" alt="Data Analysis" />
+              <h3>Data Analysis & Visualization</h3>
+              <p>
+                I perform exploratory data analysis, create visualizations, and extract meaningful
+                insights from complex datasets. I use statistical methods to uncover patterns and
+                trends.
+              </p>
+            </div>
+          </div>
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/nlp.avif" alt="NLP Solutions" />
+              <h3>Natural Language Processing</h3>
+              <p>
+                I develop NLP solutions for text analysis, sentiment analysis, and language
+                understanding tasks. I work with transformer models and deep learning architectures.
+              </p>
+            </div>
+          </div>
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/computer-vision.png" alt="Computer Vision" />
+              <h3>Computer Vision</h3>
+              <p>
+                I develop computer vision applications for image classification, object detection,
+                and image processing tasks. I work with CNN architectures and modern vision
+                libraries.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/deep-learning.webp" alt="Deep Learning" />
+              <h3>Deep Learning</h3>
+              <p>
+                I develop neural networks including CNNs, RNNs, and transformers for complex pattern
+                recognition tasks. I implement advanced architectures for state-of-the-art AI
+                solutions.
+              </p>
+            </div>
+          </div>
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/fullstack.jpg" alt="Full Stack " />
+              <h3>Full Stack ML Development</h3>
+              <p>
+                Building complete web applications from frontend to backend with database
+                integration and cloud deployment.Responsive Web Application Development.Third-Party
+                API Integration.Cloud Deployment & Hosting
+              </p>
+            </div>
+          </div>
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/aws.png" alt="Time Series" />
+              <h3>AWS Cloud Computing and DevOps Engineering</h3>
+              <p>
+                I provide AWS cloud computing services focused on building scalable, secure, and
+                cost-effective cloud solutions.I offer DevOps services aimed at automating
+                development and deployment workflows to improve speed, reliability, and
+                collaboration.
+              </p>
+            </div>
+          </div>
+          <div class="service-section">
+            <div class="service">
+              <img src="./img/data-eng.png" alt="Data Engineering" />
+              <h3>Data Engineering & ETL</h3>
+              <p>
+                I design and implement data pipelines, ETL processes, and data warehousing
+                solutions. I work with SQL, Python, and big data tools to manage and process
+                large-scale data efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- skills -->
+
+    <div class="section particle-bg" data-aos="fade-up" data-aos-duration="1000">
+      <canvas class="particle-canvas"></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <p class="title">-SKILLS</p>
+        <div class="skill-section" data-aos="fade-up" data-aos-delay="200">
+          <h2>AREA OF EXPERTISE</h2>
+          <p class="para">
+            My technical skills span across machine learning, data science, and AI. I'm proficient
+            in multiple tools and frameworks to deliver cutting-edge solutions.
+          </p>
+        </div>
+        <div class="skills">
+          <div class="skill border1 border_right">
+            <div class="items">
+              <img src="./img/html.png" alt="" />
+              <p>HTML</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img src="./img/css.png" alt="" />
+              <p>CSS</p>
+            </div>
+          </div>
+          <div class="skill border1 border3">
+            <div class="items">
+              <img src="./img/javascript (1).png" alt="" />
+              <p>JAVASCRIPT</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img src="./img/Bootstrap 1.png" alt="" />
+              <p>BOOTSTRAP</p>
+            </div>
+          </div>
+          <div class="skill border1 border_right">
+            <div class="items">
+              <img src="./img/node-js.png" alt="" />
+              <p>Node.js</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img src="./img/react (2).png" alt="" />
+              <p>React</p>
+            </div>
+          </div>
+          <div class="skill border1 border_right border7">
+            <div class="items">
+              <img src="./img/git (2).png" alt="" />
+              <p>Git</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img src="./img/github (7).png" alt="" />
+              <p>GitHub</p>
+            </div>
+          </div>
+          <div class="skill border1 border_right">
+            <div class="items">
+              <img src="./img/python.png" alt="" />
+              <p>Python</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img src="./img/ml.png" alt="" />
+              <p>Machine Learning</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img src="./img/deep-learning.webp" alt="Deep Learning icon" />
+              <p>Deep Learning</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://img.icons8.com/color/96/microsoft-excel-2019--v1.png"
+                alt="MS Excel icon"
+              />
+              <p>MS Excel</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+                alt="C language icon"
+              />
+              <p>C</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                alt="C++ icon"
+              />
+              <p>C++</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+                alt="OpenCV icon"
+              />
+              <p>OpenCV</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg"
+                alt="Go language icon"
+              />
+              <p>Go Lang</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://img.icons8.com/color/96/artificial-intelligence.png"
+                alt="Generative AI icon"
+              />
+              <p>Gen AI</p>
+            </div>
+          </div>
+          <div class="skill border1">
+            <div class="items">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4712/4712139.png"
+                alt="AI Tools icon"
+              />
+              <p>AI Tools</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- connect me -->
+    <div class="section particle-bg">
+      <canvas class="particle-canvas"></canvas>
+      <div
+        class="container-fluid bg rounded text-center pb-5 pos-relative"
+        style="position: relative; z-index: 1"
+      >
+        <img src="./img/Rocket1.png" alt="" />
+        <h1 class="custom-h1">HAVE A PROJECT IN MIND?</h1>
+        <p class="para p-4">Turn your dream website into reality with us. Let's get started!</p>
+
+        <a href="mailto:prjoga9@gmail.com" class="homeBtn">Let’s create an awesome website</a>
+      </div>
+    </div>
+    <!-- about me -->
+    <div class="section particle-bg home-feature-sync">
+      <canvas class="particle-canvas"></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <p class="title">-ABOUT</p>
+        <div class="About-section">
+          <h2>ABOUT ME</h2>
+          <div class="row img-sec">
+            <div class="col-md-6">
+              <p class="para">
+                I'm Raneesh, an AI/ML student with a passion for artificial intelligence and machine
+                learning. I'm enthusiastic about using data-driven approaches to solve complex
+                problems and create intelligent solutions. My expertise lies in machine learning,
+                deep learning, data analysis, and natural language processing.
+                <br />
+                <br />
+                I develop ML models using Python, TensorFlow, and PyTorch. I have strong skills in
+                data manipulation with Pandas, visualization with Matplotlib, and implementing
+                computer vision solutions with OpenCV.
+                <br />
+                <br />
+              </p>
+              <br />
+              <a href="" class="homeBtn">HIRE ME</a>
+
+              <a
+                href="cv/Pitamber_Joga_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="my-cv"
+                >Download CV</a
+              >
+            </div>
             <div class="col-md-6 img-sec text-center">
-            <img src="./img/pitamber-avatar3.png" class="img-fluid" alt="AI/ML Student">
-          </div>
-
-            <div class="contact">
-              <a href="mailto:prjoga9@gmail.com" class="email">
-                <img src="./img/email.png" alt="email me"> &nbsp; &nbsp;
-                prjoga9@gmail.com</a>
-            </div>
-            <div class="social-media">
-              <a href="https://www.linkedin.com/in/pitamber-joga-79656a351/" target="_blank"><img src="./img/LinkedIn Circled.png" alt="linkedin"></a>
-              <a href="https://www.kaggle.com/pitamberraneeshjoga" target="_blank"> <img src="img/kaggle-icon.png" alt="kaggle"></a>
-              <a href="https://github.com/Raneesh-69" target="_blank"><img src="./img/github (7).png" alt="github"></a>
-              <a href="https://www.instagram.com/raneesh_joga/" target="_blank"><img src="./img/Instagram.png" alt="instagram"></a>
-            </div>
-
-          </div>
-          <div class="col-md-6">
-            <div class="form">
-              <form class="formSubmit" action="https://formsubmit.co/el/f5c2f5944e723b39e701dbaeba282c9d" method="POST">
-                <input type="text" placeholder="Full Name"><br>
-                <input type="email" placeholder="Email">
-                <input type="number" placeholder="Phone No."><br>
-                <textarea name="message" id="msg" placeholder="Message" cols="30" rows="10"></textarea><br>
-                <button class="button" type="submit">Send Message</button>
-              </form>
+              <img src="./img/pitamber-avatar1.png" class="img-fluid" alt="AI/ML Student" />
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- connect me -->
+    <div id="connectMe" class="section particle-bg">
+      <canvas class="particle-canvas"></canvas>
+      <div class="container-fluid" style="position: relative; z-index: 1">
+        <p class="title">-CONTACT</p>
+        <div class="contact-section">
+          <h2>GET IN TOUCH</h2>
+          <p class="para">
+            I'm here and ready to bring your project ideas to life. Just a click away!
+          </p>
+          <div class="row img-sec justify-content-center">
+            <div class="col-md-6">
+              <div class="img-sec text-center">
+                <img src="./img/pitamber-avatar3.png" class="img-fluid" alt="AI/ML Student" />
+              </div>
 
-  <!-- footer -->
-  <main-footer></main-footer>
-  <div class="footer-bottom"><span id="year"></span> © Portfolio Pvt. Ltd. All Rights Reserved.</div>
+              <div class="contact">
+                <a href="mailto:prjoga9@gmail.com" class="email">
+                  <img src="./img/email.png" alt="email me" /> &nbsp; &nbsp; prjoga9@gmail.com</a
+                >
+              </div>
+              <div class="social-media">
+                <a href="https://www.linkedin.com/in/pitamber-joga-79656a351/" target="_blank"
+                  ><img src="./img/LinkedIn Circled.png" alt="linkedin"
+                /></a>
+                <a href="https://www.kaggle.com/pitamberraneeshjoga" target="_blank">
+                  <img src="img/kaggle-icon.png" alt="kaggle"
+                /></a>
+                <a href="https://github.com/Raneesh-69" target="_blank"
+                  ><img src="./img/github (7).png" alt="github"
+                /></a>
+                <a href="https://www.instagram.com/raneesh_joga/" target="_blank"
+                  ><img src="./img/Instagram.png" alt="instagram"
+                /></a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form">
+                <form
+                  class="formSubmit"
+                  action="https://formsubmit.co/el/f5c2f5944e723b39e701dbaeba282c9d"
+                  method="POST"
+                >
+                  <input type="text" placeholder="Full Name" /><br />
+                  <input type="email" placeholder="Email" />
+                  <input type="number" placeholder="Phone No." /><br />
+                  <textarea
+                    name="message"
+                    id="msg"
+                    placeholder="Message"
+                    cols="30"
+                    rows="10"
+                  ></textarea
+                  ><br />
+                  <button class="button" type="submit">Send Message</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- footer -->
+    <main-footer></main-footer>
+    <div class="footer-bottom">
+      <span id="year"></span> © Portfolio Pvt. Ltd. All Rights Reserved.
+    </div>
 
-  <button class="back-to-top" type="button"></button>
+    <button class="back-to-top" type="button"></button>
 
-<!--form script-->
-<script src="./js/form.js"></script>
+    <!--form script-->
+    <script src="./js/form.js"></script>
 
-  <!-- jquiry -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <!-- bootstrap js -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  
-  <!-- AOS Animation Script -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  
-  <!-- Particle Background Script -->
-  <script>
-    // Particle Background
-    const canvas = document.getElementById('particleCanvas');
-    const ctx = canvas ? canvas.getContext('2d') : null;
-    const heroSection = document.getElementById('hero');
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isSmallScreen = window.matchMedia('(max-width: 768px)').matches;
+    <!-- jquiry -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-    if (canvas && ctx && heroSection && !prefersReducedMotion) {
-      let isHeroVisible = true;
-      const heroObserver = new IntersectionObserver((entries) => {
-        if (entries[0]) {
-          isHeroVisible = entries[0].isIntersecting;
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Particle Background Script -->
+    <script>
+      // Particle Background
+      const canvas = document.getElementById("particleCanvas");
+      const ctx = canvas ? canvas.getContext("2d") : null;
+      const heroSection = document.getElementById("hero");
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const isSmallScreen = window.matchMedia("(max-width: 768px)").matches;
+
+      if (canvas && ctx && heroSection && !prefersReducedMotion) {
+        let isHeroVisible = true;
+        const heroObserver = new IntersectionObserver(
+          (entries) => {
+            if (entries[0]) {
+              isHeroVisible = entries[0].isIntersecting;
+            }
+          },
+          { threshold: 0.05 }
+        );
+        heroObserver.observe(heroSection);
+
+        function resizeCanvas() {
+          canvas.width = heroSection.offsetWidth;
+          canvas.height = heroSection.offsetHeight;
         }
-      }, { threshold: 0.05 });
-      heroObserver.observe(heroSection);
 
-      function resizeCanvas() {
-        canvas.width = heroSection.offsetWidth;
-        canvas.height = heroSection.offsetHeight;
-      }
-      
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
 
-      const particles = [];
-      const particleCount = isSmallScreen ? 20 : 34;
-      let frame = 0;
+        const particles = [];
+        const particleCount = isSmallScreen ? 20 : 34;
+        let frame = 0;
 
-      class Particle {
-        constructor() {
-          this.x = Math.random() * canvas.width;
-          this.y = Math.random() * canvas.height;
-          this.vx = (Math.random() - 0.5) * 1;
-          this.vy = (Math.random() - 0.5) * 1;
-          this.radius = Math.random() * 2 + 1;
-          this.opacity = Math.random() * 0.5 + 0.2;
-          this.color = `hsla(${Math.random() * 60 + 200}, 70%, 50%, ${this.opacity})`;
+        class Particle {
+          constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 1;
+            this.vy = (Math.random() - 0.5) * 1;
+            this.radius = Math.random() * 2 + 1;
+            this.opacity = Math.random() * 0.5 + 0.2;
+            this.color = `hsla(${Math.random() * 60 + 200}, 70%, 50%, ${this.opacity})`;
+          }
+
+          update() {
+            this.x += this.vx;
+            this.y += this.vy;
+
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+          }
+
+          draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+          }
         }
 
-        update() {
-          this.x += this.vx;
-          this.y += this.vy;
-          
-          if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-          if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        // Initialize particles
+        for (let i = 0; i < particleCount; i++) {
+          particles.push(new Particle());
         }
 
-        draw() {
-          ctx.beginPath();
-          ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-          ctx.fillStyle = this.color;
-          ctx.fill();
-        }
-      }
+        function drawConnections() {
+          for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+              const dx = particles[i].x - particles[j].x;
+              const dy = particles[i].y - particles[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
 
-      // Initialize particles
-      for (let i = 0; i < particleCount; i++) {
-        particles.push(new Particle());
-      }
-
-      function drawConnections() {
-        for (let i = 0; i < particles.length; i++) {
-          for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 150) {
-              ctx.strokeStyle = `rgba(242, 108, 79, ${0.1 * (1 - distance / 150)})`;
-              ctx.lineWidth = 1;
-              ctx.beginPath();
-              ctx.moveTo(particles[i].x, particles[i].y);
-              ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.stroke();
+              if (distance < 150) {
+                ctx.strokeStyle = `rgba(242, 108, 79, ${0.1 * (1 - distance / 150)})`;
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.stroke();
+              }
             }
           }
         }
-      }
 
-      function animate() {
-        if (document.hidden || !isHeroVisible) {
-          requestAnimationFrame(animate);
-          return;
-        }
-
-        frame++;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        particles.forEach(particle => {
-          particle.update();
-          particle.draw();
-        });
-        
-        if (frame % 2 === 0) {
-          drawConnections();
-        }
-
-        requestAnimationFrame(animate);
-      }
-
-      animate();
-    } else if (canvas && prefersReducedMotion) {
-      canvas.style.display = 'none';
-    }
-  </script>
-
-  <!-- Universal Particle System for Other Sections -->
-  <script>
-    // Universal Particle System
-    class ParticleSection {
-      constructor(section) {
-        this.section = section;
-        this.canvas = section.querySelector('.particle-canvas');
-        if (!this.canvas) return;
-        
-        this.ctx = this.canvas.getContext('2d');
-        this.particles = [];
-        const isMobile = window.matchMedia('(max-width: 768px)').matches;
-        this.particleCount = isMobile ? 14 : 24;
-        this.isVisible = false;
-        this.frame = 0;
-        
-        this.resizeCanvas();
-        window.addEventListener('resize', () => this.resizeCanvas());
-        this.setupVisibilityObserver();
-        
-        this.initParticles();
-        this.animate();
-      }
-
-      setupVisibilityObserver() {
-        const observer = new IntersectionObserver((entries) => {
-          if (entries[0]) {
-            this.isVisible = entries[0].isIntersecting;
+        function animate() {
+          if (document.hidden || !isHeroVisible) {
+            requestAnimationFrame(animate);
+            return;
           }
-        }, { threshold: 0.05 });
 
-        observer.observe(this.section);
-      }
+          frame++;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      resizeCanvas() {
-        this.canvas.width = this.section.offsetWidth;
-        this.canvas.height = this.section.offsetHeight;
-      }
-
-      initParticles() {
-        this.particles = [];
-        for (let i = 0; i < this.particleCount; i++) {
-          this.particles.push({
-            x: Math.random() * this.canvas.width,
-            y: Math.random() * this.canvas.height,
-            vx: (Math.random() - 0.5) * 0.8,
-            vy: (Math.random() - 0.5) * 0.8,
-            radius: Math.random() * 2 + 1,
-            opacity: Math.random() * 0.5 + 0.2,
-            hue: Math.random() * 60 + 200
+          particles.forEach((particle) => {
+            particle.update();
+            particle.draw();
           });
+
+          if (frame % 2 === 0) {
+            drawConnections();
+          }
+
+          requestAnimationFrame(animate);
         }
-      }
 
-      updateParticle(p) {
-        p.x += p.vx;
-        p.y += p.vy;
-        
-        if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
-        if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+        animate();
+      } else if (canvas && prefersReducedMotion) {
+        canvas.style.display = "none";
       }
+    </script>
 
-      drawParticle(p) {
-        this.ctx.beginPath();
-        this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        this.ctx.fillStyle = `hsla(${p.hue}, 70%, 50%, ${p.opacity})`;
-        this.ctx.fill();
-      }
+    <!-- Universal Particle System for Other Sections -->
+    <script>
+      // Universal Particle System
+      class ParticleSection {
+        constructor(section) {
+          this.section = section;
+          this.canvas = section.querySelector(".particle-canvas");
+          if (!this.canvas) return;
 
-      drawConnections() {
-        for (let i = 0; i < this.particles.length; i++) {
-          for (let j = i + 1; j < this.particles.length; j++) {
-            const dx = this.particles[i].x - this.particles[j].x;
-            const dy = this.particles[i].y - this.particles[j].y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            
-            if (distance < 120) {
-              this.ctx.strokeStyle = `rgba(242, 108, 79, ${0.15 * (1 - distance / 120)})`;
-              this.ctx.lineWidth = 0.8;
-              this.ctx.beginPath();
-              this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
-              this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-              this.ctx.stroke();
+          this.ctx = this.canvas.getContext("2d");
+          this.particles = [];
+          const isMobile = window.matchMedia("(max-width: 768px)").matches;
+          this.particleCount = isMobile ? 14 : 24;
+          this.isVisible = false;
+          this.frame = 0;
+
+          this.resizeCanvas();
+          window.addEventListener("resize", () => this.resizeCanvas());
+          this.setupVisibilityObserver();
+
+          this.initParticles();
+          this.animate();
+        }
+
+        setupVisibilityObserver() {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              if (entries[0]) {
+                this.isVisible = entries[0].isIntersecting;
+              }
+            },
+            { threshold: 0.05 }
+          );
+
+          observer.observe(this.section);
+        }
+
+        resizeCanvas() {
+          this.canvas.width = this.section.offsetWidth;
+          this.canvas.height = this.section.offsetHeight;
+        }
+
+        initParticles() {
+          this.particles = [];
+          for (let i = 0; i < this.particleCount; i++) {
+            this.particles.push({
+              x: Math.random() * this.canvas.width,
+              y: Math.random() * this.canvas.height,
+              vx: (Math.random() - 0.5) * 0.8,
+              vy: (Math.random() - 0.5) * 0.8,
+              radius: Math.random() * 2 + 1,
+              opacity: Math.random() * 0.5 + 0.2,
+              hue: Math.random() * 60 + 200,
+            });
+          }
+        }
+
+        updateParticle(p) {
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+        }
+
+        drawParticle(p) {
+          this.ctx.beginPath();
+          this.ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          this.ctx.fillStyle = `hsla(${p.hue}, 70%, 50%, ${p.opacity})`;
+          this.ctx.fill();
+        }
+
+        drawConnections() {
+          for (let i = 0; i < this.particles.length; i++) {
+            for (let j = i + 1; j < this.particles.length; j++) {
+              const dx = this.particles[i].x - this.particles[j].x;
+              const dy = this.particles[i].y - this.particles[j].y;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+
+              if (distance < 120) {
+                this.ctx.strokeStyle = `rgba(242, 108, 79, ${0.15 * (1 - distance / 120)})`;
+                this.ctx.lineWidth = 0.8;
+                this.ctx.beginPath();
+                this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
+                this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
+                this.ctx.stroke();
+              }
             }
           }
         }
+
+        animate() {
+          if (document.hidden || !this.isVisible) {
+            requestAnimationFrame(() => this.animate());
+            return;
+          }
+
+          this.frame++;
+          this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+
+          this.particles.forEach((p) => {
+            this.updateParticle(p);
+            this.drawParticle(p);
+          });
+
+          if (this.frame % 2 === 0) {
+            this.drawConnections();
+          }
+          requestAnimationFrame(() => this.animate());
+        }
       }
 
-      animate() {
-        if (document.hidden || !this.isVisible) {
-          requestAnimationFrame(() => this.animate());
+      // Initialize particles for all sections with particle-bg class
+      document.addEventListener("DOMContentLoaded", () => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          document.querySelectorAll(".particle-canvas").forEach((canvas) => {
+            canvas.style.display = "none";
+          });
           return;
         }
 
-        this.frame++;
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        
-        this.particles.forEach(p => {
-          this.updateParticle(p);
-          this.drawParticle(p);
+        const particleSections = document.querySelectorAll(".particle-bg");
+        particleSections.forEach((section) => {
+          new ParticleSection(section);
         });
-        
-        if (this.frame % 2 === 0) {
-          this.drawConnections();
-        }
-        requestAnimationFrame(() => this.animate());
-      }
-    }
-
-    // Initialize particles for all sections with particle-bg class
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll('.particle-canvas').forEach(canvas => {
-          canvas.style.display = 'none';
-        });
-        return;
-      }
-
-      const particleSections = document.querySelectorAll('.particle-bg');
-      particleSections.forEach(section => {
-        new ParticleSection(section);
       });
-    });
-  </script>
+    </script>
 
-  <!-- Premium Animations & Features -->
-  <script src="js/animations.js"></script>
+    <!-- Premium Animations & Features -->
+    <script src="js/animations.js"></script>
 
-  <!--custom js  -->
-  <script src="js/script.js"></script>
-</body>
-
+    <!--custom js  -->
+    <script src="js/script.js"></script>
+  </body>
 </html>

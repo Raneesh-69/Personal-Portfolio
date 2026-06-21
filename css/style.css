@@ -549,11 +549,7 @@ a.my-cv:hover {
   position: absolute;
   width: 120px;
   height: 120px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 160, 160, 0.3) 0%,
-    rgba(242, 108, 79, 0.1) 100%
-  );
+  background: radial-gradient(circle, rgba(255, 160, 160, 0.3) 0%, rgba(242, 108, 79, 0.1) 100%);
   border-radius: 50%;
   bottom: -30px;
   right: -30px;
@@ -833,8 +829,8 @@ a.my-cv:hover {
 
 .social-media a[href*="linkedin"]:hover img,
 .social-media a[href*="linkedin"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(87%) saturate(1607%)
-    hue-rotate(188deg) brightness(94%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(87%) saturate(1607%) hue-rotate(188deg)
+    brightness(94%) contrast(101%);
 }
 
 .social-media a[href*="kaggle.com"] img {
@@ -843,20 +839,20 @@ a.my-cv:hover {
 
 .social-media a[href*="kaggle.com"]:hover img,
 .social-media a[href*="kaggle.com"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(57%) sepia(97%) saturate(1318%)
-    hue-rotate(164deg) brightness(102%) contrast(103%) !important;
+  filter: brightness(0) saturate(100%) invert(57%) sepia(97%) saturate(1318%) hue-rotate(164deg)
+    brightness(102%) contrast(103%) !important;
 }
 
 .social-media a[href*="github.com"]:hover img,
 .social-media a[href*="github.com"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(30%) sepia(85%) saturate(1405%)
-    hue-rotate(255deg) brightness(92%) contrast(96%);
+  filter: brightness(0) saturate(100%) invert(30%) sepia(85%) saturate(1405%) hue-rotate(255deg)
+    brightness(92%) contrast(96%);
 }
 
 .social-media a[href*="instagram.com"]:hover img,
 .social-media a[href*="instagram.com"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(37%) sepia(83%) saturate(2772%)
-    hue-rotate(292deg) brightness(92%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(37%) sepia(83%) saturate(2772%) hue-rotate(292deg)
+    brightness(92%) contrast(101%);
 }
 .contact-section .row {
   display: flex; /* flex-direction:unset; */
@@ -958,27 +954,27 @@ footer {
 }
 .social-links a[href*="linkedin"]:hover img,
 .social-links a[href*="linkedin"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(87%) saturate(1607%)
-    hue-rotate(188deg) brightness(94%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(36%) sepia(87%) saturate(1607%) hue-rotate(188deg)
+    brightness(94%) contrast(101%);
 }
 .social-links a[href*="kaggle.com"] img {
   filter: grayscale(100%) brightness(0.45) !important;
 }
 .social-links a[href*="kaggle.com"]:hover img,
 .social-links a[href*="kaggle.com"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(57%) sepia(97%) saturate(1318%)
-    hue-rotate(164deg) brightness(102%) contrast(103%) !important;
+  filter: brightness(0) saturate(100%) invert(57%) sepia(97%) saturate(1318%) hue-rotate(164deg)
+    brightness(102%) contrast(103%) !important;
 }
 .social-links a[href*="github.com"]:hover img,
 .social-links a[href*="github.com"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(30%) sepia(85%) saturate(1405%)
-    hue-rotate(255deg) brightness(92%) contrast(96%);
+  filter: brightness(0) saturate(100%) invert(30%) sepia(85%) saturate(1405%) hue-rotate(255deg)
+    brightness(92%) contrast(96%);
 }
 
 .social-links a[href*="instagram.com"]:hover img,
 .social-links a[href*="instagram.com"]:focus-visible img {
-  filter: brightness(0) saturate(100%) invert(37%) sepia(83%) saturate(2772%)
-    hue-rotate(292deg) brightness(92%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(37%) sepia(83%) saturate(2772%) hue-rotate(292deg)
+    brightness(92%) contrast(101%);
 }
 .social-links a img {
   margin-bottom: 20px;
@@ -1571,16 +1567,8 @@ a:not(.nav-link):not(.homeBtn):not(.my-cv):not(.btn):hover::after {
 
 .section.home-feature-sync {
   background:
-    linear-gradient(
-      145deg,
-      rgba(255, 241, 236, 0.9) 0%,
-      rgba(255, 250, 248, 0.96) 62%
-    ),
-    repeating-linear-gradient(
-      135deg,
-      rgba(242, 108, 79, 0.045) 0 12px,
-      transparent 12px 28px
-    ) !important;
+    linear-gradient(145deg, rgba(255, 241, 236, 0.9) 0%, rgba(255, 250, 248, 0.96) 62%),
+    repeating-linear-gradient(135deg, rgba(242, 108, 79, 0.045) 0 12px, transparent 12px 28px) !important;
 }
 
 /* Improve top strip on inner pages (About/Projects/Certifications) */
@@ -1763,16 +1751,8 @@ body {
 
 .first-section {
   background:
-    linear-gradient(
-      145deg,
-      rgba(255, 241, 236, 0.9) 0%,
-      rgba(255, 250, 248, 0.96) 62%
-    ),
-    repeating-linear-gradient(
-      135deg,
-      rgba(242, 108, 79, 0.045) 0 12px,
-      transparent 12px 28px
-    );
+    linear-gradient(145deg, rgba(255, 241, 236, 0.9) 0%, rgba(255, 250, 248, 0.96) 62%),
+    repeating-linear-gradient(135deg, rgba(242, 108, 79, 0.045) 0 12px, transparent 12px 28px);
 }
 
 .project-card,
@@ -1789,11 +1769,7 @@ body {
 
 .project-card,
 .cert-card {
-  background: linear-gradient(
-    155deg,
-    rgba(255, 242, 235, 0.96) 0%,
-    rgba(255, 231, 220, 0.94) 100%
-  );
+  background: linear-gradient(155deg, rgba(255, 242, 235, 0.96) 0%, rgba(255, 231, 220, 0.94) 100%);
   border: 1px solid rgba(242, 108, 79, 0.16);
 }
 
@@ -1822,11 +1798,7 @@ body {
 
 .project-card .overlay,
 .cert-overlay {
-  background: linear-gradient(
-    170deg,
-    rgba(255, 243, 236, 0.9),
-    rgba(255, 230, 220, 0.94)
-  );
+  background: linear-gradient(170deg, rgba(255, 243, 236, 0.9), rgba(255, 230, 220, 0.94));
   backdrop-filter: blur(4px);
 }
 
@@ -1910,11 +1882,7 @@ textarea:focus-visible {
 /* Services-specific premium hover interaction */
 .service-section {
   isolation: isolate;
-  background: linear-gradient(
-    155deg,
-    rgba(255, 242, 235, 0.96) 0%,
-    rgba(255, 233, 222, 0.94) 100%
-  );
+  background: linear-gradient(155deg, rgba(255, 242, 235, 0.96) 0%, rgba(255, 233, 222, 0.94) 100%);
   border: 1px solid rgba(242, 108, 79, 0.16);
 }
 
@@ -1979,11 +1947,7 @@ textarea:focus-visible {
 }
 
 .service-section:hover {
-  background: linear-gradient(
-    155deg,
-    rgba(255, 236, 226, 0.98) 0%,
-    rgba(255, 225, 212, 0.96) 100%
-  );
+  background: linear-gradient(155deg, rgba(255, 236, 226, 0.98) 0%, rgba(255, 225, 212, 0.96) 100%);
 }
 
 .items {
