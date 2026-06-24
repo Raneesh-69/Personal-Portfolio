@@ -103,7 +103,61 @@
 
           <div class="project-grid">
             <div class="project-card">
-              <img src="img/project02.png" alt="Robot Automation" />
+              <img src="img/ai-pdf-ass-pic.png" alt="AI PDF Assistant" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/Raneesh-69/ai-pdf-assistant"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a
+                  href="https://ai-pdf-assistant-kk76ju58bbxhva4qktpvcz.streamlit.app/"
+                  target="_blank"
+                  class="btn live"
+                  >Live Demo</a
+                >
+                <button class="btn details" onclick="showProject('ai-pdf-assistant')">
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>AI PDF Assistant</h3>
+                <p>AI-powered PDF analysis tool</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
+
+              <div class="project-links">
+                <a
+                  href="https://github.com/yourusername/project-repo"
+                  target="_blank"
+                  class="btn github"
+                  >GitHub</a
+                >
+                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                  >Live Demo</a
+                >
+                <button
+                  type="button"
+                  class="btn details project-details-btn"
+                  data-project-title="Robot Automation System"
+                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
+                >
+                  Details
+                </button>
+              </div>
+
+              <div class="overlay">
+                <h3>Robot Automation</h3>
+                <p>AI-powered robot project</p>
+              </div>
+            </div>
+            <div class="project-card">
+              <img src="img/project01.jpg" alt="Robot Automation" />
 
               <div class="project-links">
                 <a
@@ -465,6 +519,17 @@
     </script>
 
     <!--custom js  -->
+    <div id="projectModal" class="project-modal">
+      <div class="project-modal-content">
+        <span class="project-close">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalBody"></div>
+      </div>
+    </div>
+    <script src="js/projectdata.js"></script>
+    <script src="js/project-details.js"></script>
     <script src="js/script.js"></script>
 
     <!-- Premium Animations & Features -->

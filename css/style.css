@@ -2092,3 +2092,31 @@ textarea:focus-visible {
     transform: none !important;
   }
 }
+.project-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.project-modal-content {
+  width: 70%;
+  max-width: 900px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 20px;
+}
+.project-close {
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#modalBody ul {
+  margin-left: 20px;
+}

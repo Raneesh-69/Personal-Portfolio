@@ -146,31 +146,29 @@
 
           <div class="project-grid">
             <div class="project-card">
-              <img src="img/project01.jpg" alt="Robot Automation" />
+              <img src="img/ai-pdf-ass-pic.png" alt="Robot Automation" />
 
               <div class="project-links">
                 <a
-                  href="https://github.com/yourusername/project-repo"
+                  href="https://github.com/Raneesh-69/ai-pdf-assistant"
                   target="_blank"
                   class="btn github"
                   >GitHub</a
                 >
-                <a href="https://your-live-demo-link.com" target="_blank" class="btn live"
+                <a
+                  href="https://ai-pdf-assistant-kk76ju58bbxhva4qktpvcz.streamlit.app/"
+                  target="_blank"
+                  class="btn live"
                   >Live Demo</a
                 >
-                <button
-                  type="button"
-                  class="btn details project-details-btn"
-                  data-project-title="Robot Automation System"
-                  data-project-details="An AI-powered robot automation system designed for industrial applications. Uses computer vision and machine learning for object detection and manipulation. Tech Stack: Python, OpenCV, ROS, TensorFlow. Features include real-time object recognition, autonomous path planning, and integrated control systems. Dataset: Custom industrial dataset with 5000+ labeled images. Model Approach: YOLO for detection, Motion planning algorithms for navigation. Performance: 94% accuracy on test set, 50ms inference time."
-                >
+                <button class="btn details" onclick="showProject('ai-pdf-assistant')">
                   Details
                 </button>
               </div>
 
               <div class="overlay">
-                <h3>Robot Automation</h3>
-                <p>AI-powered robot project</p>
+                <h3>AI PDF Assistant</h3>
+                <p>LLM-powered document analyzer</p>
               </div>
             </div>
 
@@ -311,12 +309,11 @@
                 <a href="https://facemaskr.netlify.app//" target="_blank" class="btn live"
                   >Live Demo</a
                 >
-                <button
-                  type="button"
-                  class="btn details project-details-btn"
-                  data-project-title="Face Mask Detection System (Computer Vision Project)"
-                  data-project-details="1) Project Title: Face Mask Detection System (Computer Vision Project)&#10;2) 1-line Description: End-to-end computer vision project that detects whether a person is wearing a face mask using deep learning.&#10;3) Problem Statement: Monitoring mask usage manually is inefficient and error-prone, especially in crowded public places.&#10;4) What It Does (Features): Detects faces in images; Classifies mask vs no-mask; Works with uploaded images (no webcam dependency); Provides real-time prediction output; Simple UI for easy usage.&#10;5) Tech Stack: Python, NumPy, Pandas, TensorFlow/Keras, OpenCV, Flask/Streamlit; Deployment: Render/Local.&#10;6) Dataset: Face Mask Detection Dataset; Source: Kaggle Face Mask Dataset.&#10;7) Model / Approach: Image preprocessing and resizing; Face detection using OpenCV; CNN model for classification; Trained on mask/no-mask images; Prediction based on trained weights.&#10;8) Results (Metrics): Accuracy around 90-95% (typical for this model); Loss minimized after training epochs; Update with exact values if available.&#10;9) Screenshots / Demo: Upload image interface; Prediction output (Mask / No Mask).&#10;10) Links: GitHub Repo: https://github.com/Raneesh-69/Face_Mask ; Live Demo: Add if deployed ; Dataset: Kaggle Face Mask Dataset."
-                >
+                 <button
+      class="btn details"
+      onclick="showProject('mask-vs-no-mask')">
+      Details
+    </button>
                   Details
                 </button>
               </div>
@@ -338,11 +335,8 @@
                   >Live Demo</a
                 >
                 <button
-                  type="button"
-                  class="btn details project-details-btn"
-                  data-project-title="Iris Flower Prediction System (ML Classification App)"
-                  data-project-details="1) Project Title: Iris Flower Prediction System (ML Classification App)&#10;2) 1-line Description: Machine learning model that predicts iris flower species based on input features with a simple web interface.&#10;3) Problem Statement: Classifying iris species manually based on measurements is time-consuming and prone to errors.&#10;4) What It Does (Features): Takes input sepal length, sepal width, petal length, and petal width; Predicts iris species (Setosa, Versicolor, Virginica); Fast and accurate classification; User-friendly interface; Works on browser.&#10;5) Tech Stack: Python, Pandas, NumPy, Scikit-learn, Flask/Streamlit, HTML/CSS (if UI used); Deployment: Render/Local.&#10;6) Dataset: Iris Dataset; Source: UCI Machine Learning Repository / Scikit-learn built-in dataset.&#10;7) Model / Approach: Data preprocessing; Feature selection (4 main features); Models tried Logistic Regression, Decision Tree, Random Forest; Best model selected based on accuracy; Final prediction system built.&#10;8) Results (Metrics): Accuracy around 95-100%; Very low error due to simple dataset; Update exact values if available.&#10;9) Screenshots / Demo: Input form UI; Prediction result output.&#10;10) Links: GitHub Repo: https://github.com/Raneesh-69/iris_pred ; Live Demo: Add if deployed ; Dataset: UCI Iris Dataset."
-                >
+                  class="btn details"
+                  onclick="showProject('iris-prediction')">
                   Details
                 </button>
               </div>
@@ -553,6 +547,77 @@
                 <p>by Anthropic</p>
                 <div class="cert-links">
                   <a href="img/claude-4.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="cert-card">
+              <img src="img/claude-5.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-5.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-6.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-6.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-7.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-7.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-8.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-8.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-9.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-9.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-10.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-10.pdf" target="_blank" class="btn view">View Certificate</a>
+                </div>
+              </div>
+            </div>
+            <div class="cert-card">
+              <img src="img/claude-11.png" alt="Claude Certificate" />
+              <div class="cert-overlay">
+                <h3>Claude Certificate</h3>
+                <p>by Anthropic</p>
+                <div class="cert-links">
+                  <a href="img/claude-11.pdf" target="_blank" class="btn view">View Certificate</a>
                 </div>
               </div>
             </div>
@@ -857,17 +922,22 @@
           <div class="row img-sec">
             <div class="col-md-6">
               <p class="para">
-                I'm Raneesh, an AI/ML student with a passion for artificial intelligence and machine
-                learning. I'm enthusiastic about using data-driven approaches to solve complex
-                problems and create intelligent solutions. My expertise lies in machine learning,
-                deep learning, data analysis, and natural language processing.
+                I'm Raneesh, an AI/ML student passionate about Artificial Intelligence, Machine Learning, and Data Science. I enjoy building intelligent systems that solve real-world problems through data-driven decision-making and automation.
                 <br />
                 <br />
-                I develop ML models using Python, TensorFlow, and PyTorch. I have strong skills in
-                data manipulation with Pandas, visualization with Matplotlib, and implementing
-                computer vision solutions with OpenCV.
+                My interests span Machine Learning, Deep Learning, Natural Language Processing (NLP), Computer Vision, and Generative AI. I continuously explore new technologies and work on practical projects that strengthen both my theoretical understanding and implementation skills.
                 <br />
                 <br />
+                I develop machine learning solutions using Python and popular AI frameworks such as TensorFlow, PyTorch, and Scikit-learn. I am also experienced in data analysis and visualization using Pandas, NumPy, and Matplotlib, along with computer vision applications using OpenCV.
+                <br />
+                <br />
+                Beyond academics, I enjoy participating in projects and continuous learning opportunities that help me expand my knowledge of modern AI technologies. My goal is to contribute to innovative AI solutions that create meaningful impact and solve challenging real-world problems.
+                <br />
+                <br />
+                I am eager to collaborate on AI/ML projects, internships, and research opportunities. If you have a project idea or would like to discuss potential collaborations, feel free to reach out. Let's connect and explore how we can work together to create intelligent solutions that make a difference!      
+                <br />
+                <br />
+                
               </p>
               <br />
               <a href="" class="homeBtn">HIRE ME</a>
@@ -1216,6 +1286,17 @@
     <script src="js/animations.js"></script>
 
     <!--custom js  -->
+    <div id="projectModal" class="project-modal">
+      <div class="project-modal-content">
+        <span class="project-close">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div id="modalBody"></div>
+      </div>
+    </div>
+    <script src="js/projectdata.js"></script>
+    <script src="js/project-details.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
