@@ -997,21 +997,28 @@
               <div class="form">
                 <form
                   class="formSubmit"
-                  action="https://formsubmit.co/el/f5c2f5944e723b39e701dbaeba282c9d"
+                  action="https://formsubmit.co/prjoga9@gmail.com"
                   method="POST"
                 >
-                  <input type="text" placeholder="Full Name" /><br />
-                  <input type="email" placeholder="Email" />
-                  <input type="number" placeholder="Phone No." /><br />
+                  <input type="hidden" name="_next" id="form-next-url" />
+                  <input type="hidden" name="_subject" value="New Portfolio Contact Message" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="hidden" name="_template" value="table" />
+                  <input type="hidden" name="_autoresponse" value="Thanks for contacting me. I received your message and will reply soon." />
+                  <input type="text" name="fullname" placeholder="Full Name" required /><br />
+                  <input type="email" name="email" placeholder="Email" required />
+                  <input type="number" name="phone" placeholder="Phone No." /><br />
                   <textarea
                     name="message"
                     id="msg"
                     placeholder="Message"
                     cols="30"
                     rows="10"
+                    required
                   ></textarea
                   ><br />
                   <button class="button" type="submit">Send Message</button>
+                  <p class="form-status" aria-live="polite"></p>
                 </form>
               </div>
             </div>

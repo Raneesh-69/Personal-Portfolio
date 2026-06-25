@@ -1,26 +1,32 @@
 const formSubmit = document.querySelector(".formSubmit");
-const formInputAll = document.querySelectorAll(".form input");
-const btnSubmit = document.querySelector(".button");
-//set flag so that it alert only once time
-let flag = true;
-btnSubmit.addEventListener("click", (e) => {
-  e.preventDefault();
-  //setting back to true so that next time it will check again
-  flag = true;
-  formInputAll.forEach((item) => {
-    formSubmitCheck(item);
-  });
-  //submiting form after all check pass
-  if (flag) {
-    formSubmit.submit();
-  }
-});
 
-function formSubmitCheck(item) {
-  if (flag === true) {
-    if (item.value.trim() == undefined || item.value.trim() == "") {
-      alert("Please provide correct Input");
-      flag = false;
-    }
+if (formSubmit) {
+  const formStatus = formSubmit.querySelector(".form-status");
+  const nextUrlField = formSubmit.querySelector("#form-next-url");
+
+  if (nextUrlField) {
+    const returnUrl = new URL(window.location.href);
+    returnUrl.searchParams.set("sent", "1");
+    returnUrl.hash = "connectMe";
+    nextUrlField.value = returnUrl.toString();
   }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("sent") === "1" && formStatus) {
+    formStatus.textContent = "Message sent successfully. I will get back to you soon.";
+    formStatus.classList.add("is-visible");
+  }
+
+  formSubmit.addEventListener("submit", (e) => {
+    const requiredFields = formSubmit.querySelectorAll("input[required], textarea[required]");
+
+    for (const field of requiredFields) {
+      if (!field.value || field.value.trim() === "") {
+        e.preventDefault();
+        alert("Please fill all required fields before sending your message.");
+        field.focus();
+        return;
+      }
+    }
+  });
 }
