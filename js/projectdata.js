@@ -207,4 +207,82 @@ const projects = {
       Open Application
       </a>`,
   },
+
+  "house-price-prediction": {
+    title: "House Price Prediction System (Machine Learning Regression App)",
+    description: `
+    <h4>1. Description</h4>
+    <p>
+      End-to-end Machine Learning web application that predicts house prices based on property features using multiple regression models. The application includes model comparison, analytics, feature importance visualization, and batch prediction through an interactive Streamlit interface.
+    </p>
+
+    <h4>2. Problem Statement</h4>
+    <p>
+      Estimating house prices manually can be challenging due to the influence of multiple factors such as area, bedrooms, parking, and furnishing status. This project leverages Machine Learning to provide fast and accurate house price predictions.
+    </p>
+
+    <h4>3. Features</h4>
+    <ul>
+      <li>🏠 Real-time house price prediction</li>
+      <li>📊 Interactive analytics dashboard</li>
+      <li>🤖 Multiple Machine Learning model comparison</li>
+      <li>📈 Feature importance visualization</li>
+      <li>📉 Exploratory Data Analysis (EDA)</li>
+      <li>📂 Batch prediction using CSV upload</li>
+      <li>📥 Download prediction results</li>
+      <li>🌐 Modern and responsive Streamlit web interface</li>
+    </ul>
+
+    <h4>4. Tech Stack</h4>
+    <ul>
+      <li>Python</li>
+      <li>Streamlit</li>
+      <li>Pandas</li>
+      <li>NumPy</li>
+      <li>Scikit-learn</li>
+      <li>Matplotlib</li>
+      <li>Pickle</li>
+      <li>Git & GitHub</li>
+      <li>Streamlit Cloud</li>
+    </ul>
+
+    <h4>5. Dataset</h4>
+    <p>
+      Dataset: Housing Price Dataset<br>
+      Source: Kaggle Housing Dataset
+    </p>
+
+    <h4>6. Model / Approach</h4>
+    <ul>
+      <li>Data preprocessing and feature engineering</li>
+      <li>Feature encoding using One-Hot Encoding</li>
+      <li>Training multiple regression models (Linear Regression, Ridge Regression, Random Forest)</li>
+      <li>Hyperparameter tuning using RandomizedSearchCV</li>
+      <li>Selecting the best-performing model based on evaluation metrics</li>
+      <li>Deploying the trained model with Streamlit</li>
+    </ul>
+
+    <h4>7. Results</h4>
+    <ul>
+      <li>Accurately predicts house prices based on user inputs</li>
+      <li>Compares multiple Machine Learning models</li>
+      <li>Displays model performance metrics and analytics</li>
+      <li>Supports CSV-based batch prediction</li>
+      <li>Provides an intuitive and responsive user interface</li>
+    </ul>
+
+    <h4>8. Links</h4>
+    <p>
+      GitHub:
+      <a href="https://github.com/Raneesh-69/house-price-prediction" target="_blank">
+      View Repository 🗃️🗃️
+      </a>
+      <br><br>
+
+      Live Demo:
+      <a href="https://your-house-price-prediction.streamlit.app/" target="_blank">
+      Open Application
+      </a>
+    </p>`,
+  },
 };
