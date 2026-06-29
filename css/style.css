@@ -339,6 +339,28 @@ a.my-cv:hover {
   overflow: hidden;
   border-radius: 18px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.project-chip {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(242, 108, 79, 0.14);
+  color: #b4462f;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.modal-category {
+  margin: -0.5rem 0 1.5rem;
+  color: #b4462f;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 } /* IMAGE */
 .project-card img {
   width: 100%;

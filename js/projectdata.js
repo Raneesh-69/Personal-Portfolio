@@ -1,6 +1,7 @@
 const projects = {
   "ai-pdf-assistant": {
     title: "AI PDF Assistant (LLM-Powered Document Analyzer)",
+    category: "NLP • LLM",
 
     description: `
     <h4>1. Description</h4>
@@ -78,6 +79,7 @@ const projects = {
   },
   "mask-vs-no-mask": {
     title: "Mask vs No Mask Detection",
+    category: "Computer Vision • Classification",
     description: `
     <h4>1. Description</h4>
     <p>
@@ -145,6 +147,7 @@ const projects = {
   },
   "iris-prediction": {
     title: "Iris Flower Prediction System (ML Classification App)",
+    category: "ML • Classification",
     description: `
     <h4>1. Description</h4>
     <p>
@@ -210,6 +213,7 @@ const projects = {
 
   "house-price-prediction": {
     title: "House Price Prediction System (Machine Learning Regression App)",
+    category: "ML • Regression",
     description: `
     <h4>1. Description</h4>
     <p>

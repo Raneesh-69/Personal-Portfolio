@@ -2,7 +2,7 @@ function showProject(projectId) {
   const project = projects[projectId];
 
   document.getElementById("modalTitle").innerHTML = project.title;
-
+  document.getElementById("modalCategory").textContent = project.category || "AI Project";
   document.getElementById("modalBody").innerHTML = project.description;
 
   document.getElementById("projectModal").style.display = "flex";
