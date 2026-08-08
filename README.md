@@ -44,5 +44,5 @@ This repository contains my **personal portfolio website**, created to showcase 
 I’m always open to collaborations, internships, and project opportunities.
 
 📌 **GitHub:** https://github.com/Raneesh-69  
-📌 **LinkedIn:** https://www.linkedin.com/in/pitamber-joga-79656a351
+📌 **LinkedIn:** https://www.linkedin.com/in/pitamber-raneesh-joga-79656a351
 📌 **Email:** prjoga9@gmail.com

@@ -210,6 +210,94 @@ const projects = {
       Open Application
       </a>`,
   },
+  cityos: {
+    title: "CityOS AI (AI-Powered Civic Management Platform)",
+    category: "AI • Full Stack • Civic Tech",
+    description: `
+
+<h4>1. Description</h4>
+<p>
+  CityOS AI is an AI-powered civic management platform designed to connect citizens with government departments and improve the way urban problems are reported, assigned, tracked, and resolved. Citizens can report issues such as potholes, damaged roads, broken streetlights, garbage, and other civic problems using images and descriptions, while administrators and government officers can manage and monitor complaints through a centralized dashboard.
+</p>
+
+<h4>2. Problem Statement</h4>
+<p>
+  Citizens often face difficulties reporting everyday civic problems and ensuring that their complaints reach the correct government department. At the same time, authorities need an efficient system to manage large numbers of complaints, assign them to responsible officers, and monitor resolution progress. CityOS AI provides a centralized digital platform to improve communication, transparency, and efficiency in civic issue management.
+</p>
+
+<h4>3. Features</h4>
+<ul>
+  <li>🏙️ Citizen-based civic issue reporting</li>
+  <li>📸 Upload images of reported problems</li>
+  <li>🤖 AI-powered civic issue analysis and categorization</li>
+  <li>🏛️ Department-based complaint management</li>
+  <li>👨‍💼 Government officer management</li>
+  <li>👥 Citizen management system</li>
+  <li>📋 Complaint assignment and tracking</li>
+  <li>🔄 Real-time complaint status management</li>
+  <li>📊 Analytics and administrative dashboard</li>
+  <li>📍 Location-based civic issue management</li>
+  <li>🔔 Complaint progress and resolution tracking</li>
+  <li>🌐 Modern and responsive web interface</li>
+</ul>
+
+<h4>4. Tech Stack</h4>
+<ul>
+  <li>React.js</li>
+  <li>JavaScript</li>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>MongoDB</li>
+  <li>REST APIs</li>
+  <li>AI / Machine Learning</li>
+  <li>Git & GitHub</li>
+  <li>Netlify / Vercel</li>
+</ul>
+
+<h4>5. System / Architecture</h4>
+<p>
+  CityOS AI follows a full-stack architecture consisting of a React-based frontend, Node.js and Express.js backend, MongoDB database, and AI-powered services. Citizens interact with the platform through the web interface, while administrators and government officers use dedicated dashboards to manage complaints, citizens, departments, and assignments.
+</p>
+
+<h4>6. Model / Approach</h4>
+<ul>
+  <li>Citizen submits a civic issue with description, image, and relevant details</li>
+  <li>AI analyzes and categorizes the reported civic problem</li>
+  <li>Complaint is routed to the appropriate department</li>
+  <li>Administrator assigns the complaint to a responsible government officer</li>
+  <li>Officer reviews the complaint and takes necessary action</li>
+  <li>Complaint status is updated throughout the resolution process</li>
+  <li>Citizens can track the progress of their complaints</li>
+  <li>Administrative analytics provide insights into complaint trends and resolution performance</li>
+</ul>
+
+<h4>7. Results</h4>
+<ul>
+  <li>Provides a centralized platform for managing civic complaints</li>
+  <li>Improves communication between citizens and government departments</li>
+  <li>Enables faster complaint assignment and tracking</li>
+  <li>Provides administrators with citizen, officer, and complaint management</li>
+  <li>Displays analytics for monitoring civic issue trends</li>
+  <li>Creates a transparent workflow from complaint submission to resolution</li>
+  <li>Provides an intuitive and responsive user interface</li>
+</ul>
+
+<h4>8. Links</h4>
+<p>
+  GitHub:
+  <a href="https://github.com/Raneesh-69/cityos" target="_blank">
+  View Repository 🗃️🗃️
+  </a>
+  <br><br>
+
+Live Demo: <a href="https://your-cityos-app.netlify.app/" target="_blank">
+Open Application </a>
+
+</p>
+`,
+  },
 
   "house-price-prediction": {
     title: "House Price Prediction System (Machine Learning Regression App)",
