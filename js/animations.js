@@ -401,6 +401,54 @@ class SectionAmbientGlow {
 }
 
 // ======================================================================
+// ROPE ROBOT - A quiet scroll companion that responds to page movement
+// ======================================================================
+class RopeRobot {
+  constructor() {
+    this.element = document.querySelector(".rope-robot");
+    this.lastScrollY = window.scrollY;
+    this.frame = null;
+    this.resetTimer = null;
+    this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    this.init();
+  }
+
+  init() {
+    if (!this.element || this.prefersReducedMotion) return;
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (this.frame) return;
+        this.frame = requestAnimationFrame(() => this.update());
+      },
+      { passive: true }
+    );
+  }
+
+  update() {
+    const currentScrollY = window.scrollY;
+    const delta = currentScrollY - this.lastScrollY;
+    const direction = delta >= 0 ? 1 : -1;
+    const travel = Math.min(Math.max(Math.abs(delta) * 0.36, 2), 12);
+
+    this.element.style.setProperty("--robot-shift", `${direction * travel}px`);
+    this.element.style.setProperty("--rope-sway", `${direction * 1.4}deg`);
+    this.element.classList.add("is-moving", direction > 0 ? "is-pulling" : "is-releasing");
+
+    window.clearTimeout(this.resetTimer);
+    this.resetTimer = window.setTimeout(() => {
+      this.element.style.setProperty("--robot-shift", "0px");
+      this.element.style.setProperty("--rope-sway", "0deg");
+      this.element.classList.remove("is-moving", "is-pulling", "is-releasing");
+    }, 160);
+
+    this.lastScrollY = currentScrollY;
+    this.frame = null;
+  }
+}
+
+// ======================================================================
 // 🎬 INITIALIZE ALL ANIMATIONS ON DOM READY
 // ======================================================================
 document.addEventListener("DOMContentLoaded", () => {
@@ -465,4 +513,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ambient color motion driven by scroll
   new SectionAmbientGlow();
+
+  // Decorative scroll companion
+  new RopeRobot();
 });
