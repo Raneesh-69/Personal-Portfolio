@@ -60,6 +60,8 @@ class CustomCursor {
     this.glow = null;
     this.x = 0;
     this.y = 0;
+    this.glowX = 0;
+    this.glowY = 0;
     this.targetX = 0;
     this.targetY = 0;
     this.isActive = false;
@@ -85,62 +87,61 @@ class CustomCursor {
     this.glow.className = "cursor-glow";
     document.body.appendChild(this.glow);
 
-    // Hide default cursor
+    // Use the native cursor until a fine pointer enters the page.
     document.body.style.cursor = "none";
   }
 
   setupListeners() {
-    document.addEventListener("mousemove", (e) => {
+    document.addEventListener("pointermove", (e) => {
       this.targetX = e.clientX;
       this.targetY = e.clientY;
     });
 
-    document.addEventListener("mouseenter", () => {
+    document.addEventListener("pointerenter", (e) => {
+      this.x = this.glowX = this.targetX = e.clientX;
+      this.y = this.glowY = this.targetY = e.clientY;
       if (this.cursor) this.cursor.style.opacity = "1";
       if (this.glow) this.glow.style.opacity = "1";
     });
 
-    document.addEventListener("mouseleave", () => {
+    document.addEventListener("pointerleave", () => {
       if (this.cursor) this.cursor.style.opacity = "0";
       if (this.glow) this.glow.style.opacity = "0";
     });
 
     // Interactive elements
-    document.addEventListener("mouseover", (e) => {
-      if (
-        e.target.matches(
-          "a, button, .project-card, .cert-card, .skill, .service, .dark-mode-toggle"
-        )
-      ) {
-        this.isActive = true;
-        if (this.cursor) this.cursor.classList.add("active");
-      }
+    const interactiveSelector =
+      "a, button, input, textarea, select, .project-card, .cert-card, .skill, .service, .service-section";
+
+    document.addEventListener("pointerover", (e) => {
+      if (!e.target.closest(interactiveSelector)) return;
+      this.isActive = true;
+      this.cursor?.classList.add("active");
+      this.glow?.classList.add("active");
     });
 
-    document.addEventListener("mouseout", (e) => {
-      if (
-        e.target.matches(
-          "a, button, .project-card, .cert-card, .skill, .service, .dark-mode-toggle"
-        )
-      ) {
-        this.isActive = false;
-        if (this.cursor) this.cursor.classList.remove("active");
-      }
+    document.addEventListener("pointerout", (e) => {
+      const leavingInteractive = e.target.closest(interactiveSelector);
+      const enteringInteractive = e.relatedTarget?.closest?.(interactiveSelector);
+      if (!leavingInteractive || leavingInteractive === enteringInteractive) return;
+      this.isActive = false;
+      this.cursor?.classList.remove("active");
+      this.glow?.classList.remove("active");
     });
   }
 
   updateCursor() {
-    // Smooth lerp movement
-    this.x += (this.targetX - this.x) * 0.3;
-    this.y += (this.targetY - this.y) * 0.3;
+    // The dot responds quickly; the halo deliberately trails behind it.
+    this.x += (this.targetX - this.x) * 0.42;
+    this.y += (this.targetY - this.y) * 0.42;
+    this.glowX += (this.targetX - this.glowX) * 0.14;
+    this.glowY += (this.targetY - this.glowY) * 0.14;
 
     if (this.cursor) {
-      this.cursor.style.left = `${this.x}px`;
-      this.cursor.style.top = `${this.y}px`;
+      this.cursor.style.transform = `translate3d(${this.x}px, ${this.y}px, 0)`;
     }
     if (this.glow) {
-      this.glow.style.left = `${this.x}px`;
-      this.glow.style.top = `${this.y}px`;
+      this.glow.style.transform = `translate3d(${this.glowX}px, ${this.glowY}px, 0)`;
     }
   }
 
@@ -437,7 +438,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dark mode disabled
 
   // Initialize custom cursor
-  if (!window.matchMedia("(hover: none)").matches) {
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
     new CustomCursor();
   }
 
