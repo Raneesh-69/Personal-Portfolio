@@ -77,6 +77,116 @@ const projects = {
     </p>
     `,
   },
+  "focus-flow": {
+    title: "FocusFlow (AI-Powered Productivity & Focus Management Platform)",
+    category: "Productivity • Full Stack • AI",
+
+    description: `
+<h4>1. Description</h4>
+<p>
+  FocusFlow is an AI-powered productivity and focus management platform
+  designed to help users organize tasks, maintain concentration, track
+  productivity, and improve their daily workflow through intelligent
+  planning, focus sessions, analytics, and personalized insights.
+</p>
+
+<h4>2. Problem Statement</h4>
+<p>
+  Managing tasks, priorities, deadlines, focus time, and productivity
+  across multiple applications can be inefficient and difficult to track.
+  FocusFlow provides a centralized workspace where users can manage their
+  work, maintain focused sessions, monitor progress, and understand their
+  productivity patterns through interactive analytics.
+</p>
+
+<h4>3. Features</h4>
+<ul>
+  <li>📋 Smart task creation and management</li>
+  <li>🎯 Focus sessions for distraction-free work</li>
+  <li>⏱️ Focus time tracking</li>
+  <li>📊 Interactive productivity analytics</li>
+  <li>📈 Performance and productivity insights</li>
+  <li>📅 Daily productivity dashboard</li>
+  <li>🔥 Productivity streak tracking</li>
+  <li>⭐ Task priority and deadline management</li>
+  <li>🧠 AI-powered productivity assistance</li>
+  <li>🔔 Smart productivity notifications</li>
+  <li>👤 Secure user authentication</li>
+  <li>⚙️ Personalized settings and preferences</li>
+  <li>📱 Responsive design for desktop, tablet, and mobile</li>
+  <li>✨ Modern animations, transitions, hover effects, and interactive UI</li>
+  <li>🌐 Fully deployed full-stack web application</li>
+</ul>
+
+<h4>4. Tech Stack</h4>
+<ul>
+  <li>React.js</li>
+  <li>JavaScript</li>
+  <li>HTML5</li>
+  <li>CSS3</li>
+  <li>React Router</li>
+  <li>Node.js</li>
+  <li>Express.js</li>
+  <li>REST APIs</li>
+  <li>MongoDB</li>
+  <li>Data Visualization / Charting Libraries</li>
+  <li>AI-powered productivity analysis</li>
+  <li>Git & GitHub</li>
+  <li>Vercel</li>
+  <li>Render</li>
+</ul>
+
+<h4>5. Dataset</h4>
+<p>
+  Dataset: User-generated productivity data<br>
+  Source: Dynamic data generated from tasks, focus sessions,
+  completion history, priorities, schedules, and productivity activity.
+</p>
+
+<h4>6. Model / Approach</h4>
+<ul>
+  <li>Developed a component-based frontend using React.js</li>
+  <li>Implemented client-side navigation using React Router</li>
+  <li>Built RESTful backend services using Node.js and Express.js</li>
+  <li>Used MongoDB for persistent storage of users, tasks, sessions, and productivity data</li>
+  <li>Implemented user authentication and personalized user workflows</li>
+  <li>Developed task creation, updating, completion, deletion, and priority management</li>
+  <li>Implemented dedicated focus sessions with time tracking</li>
+  <li>Collected productivity activity for analytics and performance analysis</li>
+  <li>Generated productivity statistics, trends, streaks, and completion metrics</li>
+  <li>Integrated AI-powered concepts for task analysis, prioritization, and productivity recommendations</li>
+  <li>Visualized productivity data using interactive charts and dashboard components</li>
+  <li>Designed a responsive interface with modern animations and transitions</li>
+</ul>
+
+<h4>7. Results</h4>
+<ul>
+  <li>Successfully provides centralized task and productivity management</li>
+  <li>Enables users to conduct and track focused work sessions</li>
+  <li>Tracks task completion, focus time, priorities, and productivity streaks</li>
+  <li>Provides interactive productivity analytics and performance insights</li>
+  <li>Supports personalized productivity workflows and settings</li>
+  <li>Combines task management, focus tracking, scheduling, analytics, and AI-powered productivity features</li>
+  <li>Responsive across modern desktop and mobile devices</li>
+  <li>Implemented as a scalable full-stack web application</li>
+  <li>Successfully deployed as a live web application</li>
+</ul>
+
+<h4>8. Links</h4>
+<p>
+  GitHub:
+  <a href="https://github.com/Raneesh-69/FocusFlow" target="_blank">
+  View Repository 🗃️
+  </a>
+  <br><br>
+
+  Live Demo:
+  <a href="https://focus-flow-two-mu.vercel.app/login" target="_blank">
+  Open Application 🚀
+  </a>
+</p>
+`,
+  },
   "mask-vs-no-mask": {
     title: "Mask vs No Mask Detection",
     category: "Computer Vision • Classification",
