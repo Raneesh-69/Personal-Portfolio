@@ -87,14 +87,21 @@ class CustomCursor {
     this.glow.className = "cursor-glow";
     document.body.appendChild(this.glow);
 
-    // Use the native cursor until a fine pointer enters the page.
-    document.body.style.cursor = "none";
+    // CSS hides the native cursor only for fine pointers. Touch devices keep their native behavior.
+    document.body.style.cursor = "";
   }
 
   setupListeners() {
     document.addEventListener("pointermove", (e) => {
       this.targetX = e.clientX;
       this.targetY = e.clientY;
+      // pointerenter on document is unreliable across browsers; reveal on the first real move.
+      if (this.cursor) this.cursor.style.opacity = "1";
+      if (this.glow) this.glow.style.opacity = "1";
+      this.x ||= e.clientX;
+      this.y ||= e.clientY;
+      this.glowX ||= e.clientX;
+      this.glowY ||= e.clientY;
     });
 
     document.addEventListener("pointerenter", (e) => {
@@ -104,10 +111,42 @@ class CustomCursor {
       if (this.glow) this.glow.style.opacity = "1";
     });
 
-    document.addEventListener("pointerleave", () => {
+    const hideCursor = () => {
+      this.isActive = false;
+      this.cursor?.classList.remove("active");
+      this.glow?.classList.remove("active");
       if (this.cursor) this.cursor.style.opacity = "0";
       if (this.glow) this.glow.style.opacity = "0";
+    };
+
+    const showCursor = (e) => {
+      if (!e) return;
+      this.targetX = e.clientX;
+      this.targetY = e.clientY;
+      this.x = e.clientX;
+      this.y = e.clientY;
+      this.glowX = e.clientX;
+      this.glowY = e.clientY;
+      if (this.cursor) this.cursor.style.opacity = "1";
+      if (this.glow) this.glow.style.opacity = "1";
+    };
+
+    // pointerleave on document is not reliable when the pointer exits the viewport.
+    // Use window-level mouseout/pointerout plus blur so the custom cursor never gets
+    // stranded on the page after the real cursor leaves the browser window.
+    window.addEventListener("mouseout", (e) => {
+      if (!e.relatedTarget && !e.toElement) hideCursor();
     });
+
+    window.addEventListener("pointerout", (e) => {
+      if (!e.relatedTarget && !e.toElement) hideCursor();
+    });
+
+    window.addEventListener("blur", hideCursor);
+    window.addEventListener("mouseleave", hideCursor);
+
+    window.addEventListener("mouseenter", showCursor);
+    window.addEventListener("pointerenter", showCursor);
 
     // Interactive elements
     const interactiveSelector =
@@ -177,13 +216,8 @@ class StickyNavbar {
       this.navbar?.classList.remove("scrolled");
     }
 
-    // Shrink navbar on scroll
-    if (currentScroll > this.lastScroll && currentScroll > 300) {
-      this.navbar?.classList.add("nav-shrink");
-    } else {
-      this.navbar?.classList.remove("nav-shrink");
-    }
-
+    // Keep the navbar permanently accessible. The visual style changes, but it never slides off-screen.
+    this.navbar?.classList.remove("nav-shrink");
     this.lastScroll = currentScroll;
   }
 }
