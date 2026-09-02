@@ -2,21 +2,48 @@ let date = new Date();
 let year = date.getFullYear();
 document.getElementById("year").innerHTML = year;
 
-if (!document.getElementById("scrollProgress")) {
-  const scrollProgress = document.createElement("div");
-  scrollProgress.id = "scrollProgress";
-  document.body.prepend(scrollProgress);
+const scrollProgress =
+  document.getElementById("scrollProgress") ||
+  (() => {
+    const el = document.createElement("div");
+    el.id = "scrollProgress";
+    el.setAttribute("aria-hidden", "true");
+    el.style.position = "fixed";
+    el.style.top = "78px";
+    el.style.left = "0";
+    el.style.width = "100vw";
+    el.style.height = "3px";
+    el.style.borderRadius = "0";
+    el.style.transform = "none";
+    el.style.transformOrigin = "left center";
+    el.style.overflow = "hidden";
+    el.style.zIndex = "100000";
+    el.style.pointerEvents = "none";
+    el.style.background = "rgba(242, 108, 79, 0.12)";
+    el.style.boxShadow = "none";
+    el.style.opacity = "1";
+    el.style.visibility = "visible";
+    el.style.setProperty("--progress", "0%");
+    document.body.prepend(el);
+    return el;
+  })();
 
-  const updateScrollProgress = () => {
-    const scrollTop = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-    scrollProgress.style.width = `${progress}%`;
-  };
+const updateScrollProgress = () => {
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
+  const clamped = Math.min(100, Math.max(0, progress));
+  scrollProgress.style.setProperty("--progress", `${clamped}%`);
+  scrollProgress.style.opacity = "1";
+  scrollProgress.style.visibility = "visible";
+  scrollProgress.style.display = "block";
+  scrollProgress.style.zIndex = "100000";
+  scrollProgress.style.top = "78px";
+  scrollProgress.style.left = "0";
+};
 
-  window.addEventListener("scroll", updateScrollProgress, { passive: true });
-  updateScrollProgress();
-}
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
 
 if (window.AOS) {
   const animatedElements = document.querySelectorAll(
