@@ -1,21 +1,53 @@
 function showProject(projectId) {
   const project = projects[projectId];
 
-  document.getElementById("modalTitle").innerHTML = project.title;
-  document.getElementById("modalCategory").textContent = project.category || "AI Project";
-  document.getElementById("modalBody").innerHTML = project.description;
+  if (!project) {
+    console.error("Project not found:", projectId);
+    return;
+  }
 
-  document.getElementById("projectModal").style.display = "flex";
+  const modal = document.getElementById("projectModal");
+  const title = document.getElementById("modalTitle");
+  const category = document.getElementById("modalCategory");
+  const body = document.getElementById("modalBody");
+  const image = document.getElementById("modalImage");
+
+  title.textContent = project.title;
+  category.textContent = project.category || "AI Project";
+  body.innerHTML = project.description;
+  image.src = project.image;
+
+  modal.style.display = "flex";
 }
 
-document.querySelector(".project-close").addEventListener("click", () => {
-  document.getElementById("projectModal").style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
+document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("projectModal");
+  const closeButton = document.querySelector(".project-close");
 
-  if (e.target === modal) {
-    modal.style.display = "none";
+  if (!modal || !closeButton) {
+    console.error("Project modal elements not found.");
+    return;
   }
+
+  // Move modal directly under body
+  document.body.appendChild(modal);
+
+  // Close button
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
+
+  // Close when clicking outside the modal content
+  window.addEventListener("click", function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  // Close with ESC
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      modal.style.display = "none";
+    }
+  });
 });

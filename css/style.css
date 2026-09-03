@@ -716,6 +716,7 @@ a.my-cv:hover {
 }
 .items img {
   width: 5.5rem;
+  height: 5.5rem;
   place-items: centre;
 }
 .items p {
@@ -723,6 +724,13 @@ a.my-cv:hover {
 }
 .skill {
   width: 250px;
+  height: 140px;
+  box-sizing: border-box;
+}
+.skill img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 .project-grid {
   display: grid;
@@ -2227,12 +2235,22 @@ textarea:focus-visible {
 }
 .project-modal {
   display: none;
-  position: fixed;
-  z-index: 9999;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-}
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
 
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 999999 !important;
+}
 .project-modal-content {
   width: 70%;
   max-width: 900px;
@@ -3670,4 +3688,17 @@ main-footer .section {
     column-gap: 12px !important;
     row-gap: 18px !important;
   }
+}
+
+/* Fix cursor disappearing inside project modal */
+.project-modal,
+.project-modal *,
+.project-modal-content {
+  cursor: default !important;
+}
+
+.project-modal .project-close,
+.project-modal button,
+.project-modal a {
+  cursor: pointer !important;
 }
