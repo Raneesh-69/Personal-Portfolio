@@ -10,12 +10,10 @@ function showProject(projectId) {
   const title = document.getElementById("modalTitle");
   const category = document.getElementById("modalCategory");
   const body = document.getElementById("modalBody");
-  const image = document.getElementById("modalImage");
 
   title.textContent = project.title;
   category.textContent = project.category || "AI Project";
   body.innerHTML = project.description;
-  image.src = project.image;
 
   modal.style.display = "flex";
 }
