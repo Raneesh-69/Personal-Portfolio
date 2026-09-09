@@ -3702,3 +3702,184 @@ main-footer .section {
 .project-modal a {
   cursor: pointer !important;
 }
+/* =========================================================
+   FINAL RESPONSIVE PROJECT GRID FIX
+   ========================================================= */
+
+.project-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-areas: none !important;
+  gap: 30px !important;
+  width: 100%;
+  max-width: 100%;
+  margin: 3.2rem 0 0 !important;
+  padding: 0 !important;
+}
+
+.project-grid > .project-card {
+  grid-area: auto !important;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Images must stay inside the card */
+.project-card img {
+  width: 100%;
+  max-width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .project-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: none !important;
+    gap: 24px !important;
+    margin: 2rem 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .project-grid > .project-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    max-height: 240px;
+    object-fit: cover;
+  }
+
+  .project-links {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .project-links .btn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .project-grid {
+    gap: 20px !important;
+  }
+
+  .project-card img {
+    min-height: 160px;
+  }
+
+  .project-links {
+    gap: 6px;
+  }
+
+  .project-links .btn {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+}
+/* =========================================================
+   MOBILE PERFORMANCE / SMOOTH SCROLL ANIMATIONS
+   ========================================================= */
+
+@media (max-width: 767px) {
+  /* Faster reveal animations */
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    transition:
+      opacity 420ms ease-out,
+      transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  [data-aos="slide-in-left"] {
+    opacity: 0;
+    transform: translate3d(-18px, 0, 0);
+    transition:
+      opacity 420ms ease-out,
+      transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  [data-aos="fade-up"].aos-animate,
+  [data-aos="slide-in-left"].aos-animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Don't animate heavy card effects while scrolling */
+  .project-card,
+  .cert-card,
+  .service-section,
+  .items {
+    will-change: transform, opacity;
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Remove expensive blur effects on mobile */
+  .project-card,
+  .cert-card,
+  .service-section,
+  .items {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Disable decorative animated shine on skill cards */
+  .items::before,
+  .service-section::before {
+    display: none !important;
+  }
+
+  /* Keep images GPU-friendly */
+  .project-card img,
+  .cert-card img,
+  .items img {
+    transform: translate3d(0, 0, 0);
+  }
+
+  /* Disable hover-like transforms on touch devices */
+  .project-card:hover,
+  .cert-card:hover,
+  .service-section:hover,
+  .items:hover {
+    transform: none !important;
+  }
+
+  /* Don't animate card shadows on mobile */
+  .project-card,
+  .cert-card,
+  .service-section,
+  .items {
+    box-shadow: var(--shadow-soft) !important;
+    transition:
+      opacity 420ms ease-out,
+      transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+  }
+}
