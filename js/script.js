@@ -179,21 +179,42 @@ class Footer extends HTMLElement {
 }
 
 // customElements.define("main-header", Header);
-customElements.define("main-footer", Footer);
+customElements.define("main-footer", Footer); // =====================================
+// BACK TO TOP BUTTON - FINAL
+// =====================================
 
-// Back to top
-const amountScrolled = 200;
-const btnBackToTop = document.querySelector(".back-to-top");
+window.addEventListener("load", function () {
+  const btn = document.querySelector(".back-to-top");
 
-if (btnBackToTop) {
-  const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  if (!btn) {
+    console.error("❌ Back To Top button not found");
+    return;
+  }
 
-  const toggleBtnBackToTop = () => {
-    window.scrollY > 200
-      ? btnBackToTop.classList.add("back-to-top_show")
-      : btnBackToTop.classList.remove("back-to-top_show");
-  };
+  // Move button directly under <body>
+  // so AOS/section positioning cannot affect it.
+  document.body.appendChild(btn);
 
-  btnBackToTop.addEventListener("click", backToTop);
-  window.addEventListener("scroll", toggleBtnBackToTop, { passive: true });
-}
+  console.log("✅ Back To Top initialized");
+
+  function updateBackToTop() {
+    if (window.scrollY > 200) {
+      btn.classList.add("back-to-top_show");
+    } else {
+      btn.classList.remove("back-to-top_show");
+    }
+  }
+
+  btn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
+  window.addEventListener("scroll", updateBackToTop, {
+    passive: true,
+  });
+
+  updateBackToTop();
+});

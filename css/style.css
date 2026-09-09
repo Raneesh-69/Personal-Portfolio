@@ -3954,3 +3954,181 @@ main-footer .section {
     transition: none !important;
   }
 }
+/* =========================================================
+   GO TO TOP BUTTON - MOBILE FIX
+   ========================================================= */
+
+.back-to-top {
+  position: fixed !important;
+  right: 18px !important;
+  bottom: 20px !important;
+
+  width: 48px !important;
+  height: 48px !important;
+
+  display: none;
+  visibility: hidden;
+
+  z-index: 99999 !important;
+
+  border: none !important;
+  border-radius: 50% !important;
+
+  background: #f26c4f !important;
+  color: white !important;
+
+  box-shadow: 0 6px 20px rgba(242, 108, 79, 0.3) !important;
+
+  cursor: pointer;
+}
+
+/* When JavaScript adds this class */
+.back-to-top.back-to-top_show {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Arrow */
+.back-to-top::before {
+  content: "" !important;
+  position: absolute !important;
+
+  left: 50% !important;
+  top: 50% !important;
+
+  width: 10px !important;
+  height: 10px !important;
+
+  border-left: 3px solid white !important;
+  border-top: 3px solid white !important;
+
+  transform: translate(-50%, -30%) rotate(45deg) !important;
+
+  visibility: visible !important;
+}
+
+.back-to-top::after {
+  display: none !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .back-to-top {
+    right: 16px !important;
+    bottom: 18px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+}
+.back-to-top {
+  display: block !important;
+  visibility: visible !important;
+  width: 50px !important;
+  height: 50px !important;
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  z-index: 999999 !important;
+  background: red !important;
+}
+
+/* =========================================
+   MODERN BACK TO TOP BUTTON
+   ========================================= */
+
+#backToTop {
+  position: fixed !important;
+
+  top: auto !important;
+  left: auto !important;
+  right: 24px !important;
+  bottom: 24px !important;
+
+  width: 48px !important;
+  height: 48px !important;
+
+  display: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: 1px solid rgba(242, 108, 79, 0.35) !important;
+  border-radius: 50% !important;
+
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #f26c4f !important;
+
+  font-family: Arial, sans-serif !important;
+  font-size: 25px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+
+  text-align: center !important;
+
+  z-index: 2147483647 !important;
+
+  cursor: pointer !important;
+
+  box-shadow: 0 6px 20px rgba(30, 23, 20, 0.12) !important;
+
+  transform: none !important;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease !important;
+}
+
+/* Show */
+#backToTop.back-to-top_show {
+  display: flex !important;
+}
+
+/* Remove ALL old pseudo arrows */
+#backToTop::before,
+#backToTop::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Hover */
+#backToTop:hover {
+  background: #f26c4f !important;
+  color: #ffffff !important;
+
+  transform: translateY(-4px) !important;
+
+  box-shadow: 0 10px 25px rgba(242, 108, 79, 0.25) !important;
+}
+
+/* Click */
+#backToTop:active {
+  transform: translateY(-1px) scale(0.94) !important;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #backToTop {
+    width: 44px !important;
+    height: 44px !important;
+
+    right: 16px !important;
+    bottom: 18px !important;
+
+    font-size: 23px !important;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  #backToTop {
+    transition: none !important;
+  }
+
+  #backToTop:hover {
+    transform: none !important;
+  }
+}
