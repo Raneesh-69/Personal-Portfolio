@@ -3883,3 +3883,74 @@ main-footer .section {
       transform 420ms cubic-bezier(0.22, 0.61, 0.36, 1) !important;
   }
 }
+/* =========================================================
+   MOBILE BACKGROUND - NO SCROLL PARALLAX
+   ========================================================= */
+
+@media (max-width: 767px) {
+  body {
+    background:
+      radial-gradient(700px circle at 10% 5%, rgba(242, 108, 79, 0.07), transparent 50%),
+      radial-gradient(600px circle at 90% 25%, rgba(41, 160, 215, 0.05), transparent 50%),
+      var(--bg-primary) !important;
+  }
+}
+/* =========================================================
+   MOBILE SCROLL ANIMATION - PERFORMANCE FIX
+   ========================================================= */
+
+@media (max-width: 767px) {
+  /* Make AOS card entrance much faster */
+  [data-aos="fade-up"],
+  [data-aos="slide-in-left"] {
+    opacity: 0 !important;
+    transform: translate3d(0, 8px, 0) !important;
+
+    transition:
+      opacity 180ms ease-out,
+      transform 180ms ease-out !important;
+  }
+
+  [data-aos="fade-up"].aos-animate,
+  [data-aos="slide-in-left"].aos-animate {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+  }
+
+  /* Remove expensive card effects while scrolling */
+  .project-card,
+  .cert-card,
+  .service-section,
+  .items {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+
+    transition:
+      opacity 180ms ease-out,
+      transform 180ms ease-out !important;
+
+    box-shadow: 0 8px 24px rgba(30, 23, 20, 0.06) !important;
+  }
+
+  /* Don't animate cards when touched */
+  .project-card:hover,
+  .cert-card:hover,
+  .service-section:hover,
+  .items:hover {
+    transform: none !important;
+  }
+
+  /* Remove decorative animation */
+  .items::before,
+  .service-section::before {
+    display: none !important;
+  }
+
+  /* Keep images static */
+  .project-card img,
+  .cert-card img {
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
