@@ -1981,25 +1981,6 @@ button[type="submit"] {
   box-shadow: 0 8px 24px rgba(242, 108, 79, 0.28);
 }
 
-.reveal-in {
-  opacity: 1 !important;
-  transform: translateY(0) scale(1) !important;
-  transition:
-    opacity 520ms ease,
-    transform 520ms cubic-bezier(0.22, 0.61, 0.36, 1);
-  transition-delay: var(--reveal-delay, 0ms);
-}
-
-.project-card,
-.cert-card,
-.service-section,
-.items,
-.contact-section,
-.About-section {
-  opacity: 0;
-  transform: translateY(20px) scale(0.99);
-}
-
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -4130,5 +4111,135 @@ main-footer .section {
 
   #backToTop:hover {
     transform: none !important;
+  }
+}
+/* =========================================================
+   🎬 PREMIUM PROJECT + CERTIFICATE SCROLL MOTION
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   🖥️ DESKTOP
+   Cinematic scroll-linked card movement
+   --------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .project-card,
+  .cert-card {
+    --scroll-y: 0px;
+    --scroll-scale: 1;
+    --scroll-rotate: 0deg;
+    --scroll-opacity: 1;
+
+    opacity: var(--scroll-opacity);
+
+    transform: perspective(1400px) translate3d(0, var(--scroll-y), 0) rotateX(var(--scroll-rotate))
+      scale(var(--scroll-scale));
+
+    transform-origin: center center;
+
+    will-change: transform, opacity;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    contain: layout paint;
+  }
+
+  /* -------------------------------------------------------
+     Project / certificate image depth
+     ------------------------------------------------------- */
+
+  .project-card img,
+  .cert-card img {
+    --image-parallax: 0px;
+
+    transform: translate3d(0, var(--image-parallax), 0) scale(1.015);
+
+    will-change: transform;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* -------------------------------------------------------
+     Keep existing hover image effect compatible
+     ------------------------------------------------------- */
+
+  .project-card:hover img,
+  .cert-card:hover img {
+    transform: translate3d(0, var(--image-parallax), 0) scale(1.08);
+  }
+
+  /* -------------------------------------------------------
+     Smooth card rendering
+     ------------------------------------------------------- */
+
+  .project-card,
+  .cert-card {
+    transition: box-shadow 0.45s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+}
+
+/* =========================================================
+   📱 MOBILE
+   Simple fade + upward reveal
+   ========================================================= */
+
+@media (max-width: 767px) {
+  .project-card,
+  .cert-card {
+    opacity: 0;
+
+    transform: translate3d(0, 25px, 0) scale(0.985);
+
+    transition:
+      opacity 0.55s cubic-bezier(0.22, 0.61, 0.36, 1),
+      transform 0.55s cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    transition-delay: var(--portfolio-delay, 0ms);
+
+    will-change: opacity, transform;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .project-card.portfolio-motion-visible,
+  .cert-card.portfolio-motion-visible {
+    opacity: 1;
+
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  /* No scroll parallax on mobile */
+  .project-card img,
+  .cert-card img {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* Natural touch interaction */
+  .project-card:hover,
+  .cert-card:hover {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+
+/* =========================================================
+   ♿ REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card,
+  .cert-card {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .project-card img,
+  .cert-card img {
+    transform: none !important;
+    transition: none !important;
   }
 }

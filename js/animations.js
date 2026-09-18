@@ -303,50 +303,179 @@ class FloatingImage {
 }
 
 // ======================================================================
-// ✨ REVEAL ON SCROLL - Refined viewport-triggered animations
+// 🎬 PROJECT + CERTIFICATE SCROLL MOTION
+// Desktop  → cinematic smooth scroll
+// Mobile   → simple reveal
 // ======================================================================
-class RevealOnScroll {
+
+class PortfolioScrollMotion {
   constructor() {
+    this.cards = document.querySelectorAll(".project-card, .cert-card");
+
     this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    this.isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    this.targets = new Map();
+    this.values = new Map();
+
+    this.raf = null;
+
     this.init();
   }
 
   init() {
-    const targets = document.querySelectorAll(
-      ".project-card, .cert-card, .service-section, .items, .contact-section, .About-section"
-    );
+    if (!this.cards.length) return;
 
-    if (!targets.length) return;
-
+    // Respect accessibility settings
     if (this.prefersReducedMotion) {
-      targets.forEach((el) => el.classList.add("reveal-in"));
+      this.cards.forEach((card) => {
+        card.classList.add("portfolio-motion-visible");
+      });
       return;
     }
 
+    // ---------------------------------------------------------------
+    // 📱 MOBILE
+    // ---------------------------------------------------------------
+    if (this.isMobile) {
+      this.initMobile();
+      return;
+    }
+
+    // ---------------------------------------------------------------
+    // 🖥️ DESKTOP
+    // ---------------------------------------------------------------
+    this.initDesktop();
+  }
+
+  // ================================================================
+  // 📱 MOBILE — Simple and lightweight
+  // ================================================================
+
+  initMobile() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("reveal-in");
+            entry.target.classList.add("portfolio-motion-visible");
           } else {
-            entry.target.classList.remove("reveal-in");
+            entry.target.classList.remove("portfolio-motion-visible");
           }
         });
       },
       {
-        root: null,
-        threshold: 0.15,
+        threshold: 0.12,
         rootMargin: "0px 0px -40px 0px",
       }
     );
 
-    targets.forEach((el, index) => {
-      el.style.setProperty("--reveal-delay", `${(index % 8) * 60}ms`);
-      observer.observe(el);
+    this.cards.forEach((card, index) => {
+      card.style.setProperty("--portfolio-delay", `${(index % 3) * 50}ms`);
+
+      observer.observe(card);
     });
   }
-}
 
+  // ================================================================
+  // 🖥️ DESKTOP — Smooth cinematic scroll
+  // ================================================================
+
+  initDesktop() {
+    this.cards.forEach((card) => {
+      this.targets.set(card, 0);
+      this.values.set(card, 0);
+    });
+
+    window.addEventListener("scroll", () => this.requestFrame(), { passive: true });
+
+    window.addEventListener("resize", () => this.requestFrame());
+
+    this.requestFrame();
+  }
+
+  requestFrame() {
+    if (this.raf) return;
+
+    this.raf = requestAnimationFrame(() => {
+      this.updateTargets();
+      this.animate();
+
+      this.raf = null;
+    });
+  }
+
+  // Calculate how far each card is from the center of the viewport
+  updateTargets() {
+    const viewportCenter = window.innerHeight * 0.5;
+
+    this.cards.forEach((card) => {
+      const rect = card.getBoundingClientRect();
+
+      const cardCenter = rect.top + rect.height * 0.5;
+
+      let distance = (cardCenter - viewportCenter) / (window.innerHeight * 0.65);
+
+      // Keep the effect controlled
+      distance = Math.max(-1, Math.min(1, distance));
+
+      this.targets.set(card, distance);
+    });
+  }
+
+  // Smoothly interpolate toward target values
+  animate() {
+    let needsNextFrame = false;
+
+    this.cards.forEach((card) => {
+      const target = this.targets.get(card) ?? 0;
+
+      let current = this.values.get(card) ?? 0;
+
+      // Butter-smooth interpolation
+      current += (target - current) * 0.085;
+
+      this.values.set(card, current);
+
+      const progress = Math.abs(current);
+
+      // Subtle cinematic movement
+      const translateY = current * -18;
+
+      const scale = 1 - progress * 0.035;
+
+      const rotateX = current * -1.8;
+
+      const opacity = 1 - progress * 0.12;
+
+      card.style.setProperty("--scroll-y", `${translateY.toFixed(3)}px`);
+
+      card.style.setProperty("--scroll-scale", scale.toFixed(4));
+
+      card.style.setProperty("--scroll-rotate", `${rotateX.toFixed(3)}deg`);
+
+      card.style.setProperty("--scroll-opacity", opacity.toFixed(4));
+
+      // Tiny image depth movement
+      const image = card.querySelector("img");
+
+      if (image) {
+        image.style.setProperty("--image-parallax", `${(current * -10).toFixed(3)}px`);
+      }
+
+      if (Math.abs(target - current) > 0.001) {
+        needsNextFrame = true;
+      }
+    });
+
+    if (needsNextFrame) {
+      this.raf = requestAnimationFrame(() => {
+        this.animate();
+        this.raf = null;
+      });
+    }
+  }
+}
 // ======================================================================
 // 🧲 MAGNETIC BUTTONS - Premium pointer interaction
 // ======================================================================
@@ -384,7 +513,7 @@ class CardTilt {
   constructor() {
     this.prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     this.isTouch = window.matchMedia("(hover: none)").matches;
-    this.cards = document.querySelectorAll(".project-card, .cert-card, .service-section, .items");
+    this.cards = document.querySelectorAll(".service-section, .items");
     this.init();
   }
 
@@ -481,10 +610,10 @@ class RopeRobot {
     this.frame = null;
   }
 }
-
 // ======================================================================
 // 🎬 INITIALIZE ALL ANIMATIONS ON DOM READY
 // ======================================================================
+
 document.addEventListener("DOMContentLoaded", () => {
   // Hero typing effect - roles rotating
   const typingRoles = [
@@ -513,6 +642,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const roleElement = document.querySelector(".slogun");
+
   if (roleElement) {
     new TypeWriter("typing-role", typingRoles, 80, 40, 3000);
   }
@@ -536,8 +666,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Floating image animation
   new FloatingImage(".img img");
 
-  // Scroll reveal animations
-  new RevealOnScroll();
+  // 🎬 Projects + Certifications scroll motion
+  new PortfolioScrollMotion();
 
   // Magnetic micro-interactions
   new MagneticButtons();

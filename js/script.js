@@ -47,7 +47,7 @@ updateScrollProgress();
 
 if (window.AOS) {
   const animatedElements = document.querySelectorAll(
-    ".section, .project-card, .cert-card, .pricing-plans .card, .skill, .service, .contact-section"
+    ".section, .pricing-plans .card, .skill, .service, .contact-section"
   );
 
   animatedElements.forEach((element, index) => {
