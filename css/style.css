@@ -4243,3 +4243,954 @@ main-footer .section {
     transition: none !important;
   }
 }
+/* ================================================================
+   CINEMATIC ORBITAL TECH STACK
+   HERO → TECH → PROJECTS
+   15 NODE INFINITE LOOP
+   ================================================================ */
+
+.tech-stack-curve {
+  --coral: #f26c4f;
+  --coral-dark: #b4462f;
+  --ink: #252731;
+  --cream: #fffaf8;
+
+  position: relative;
+  width: 100%;
+  height: 180px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(ellipse at 50% 55%, rgba(242, 108, 79, 0.055), transparent 55%),
+    linear-gradient(180deg, #fffaf8 0%, #fff5f1 48%, #fffaf8 100%);
+
+  border-top: 1px solid rgba(242, 108, 79, 0.08);
+  border-bottom: 1px solid rgba(242, 108, 79, 0.1);
+
+  isolation: isolate;
+  z-index: 10;
+}
+
+/* ================================================================
+   AMBIENT GLOW
+   ================================================================ */
+
+.tech-ambient-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 55%;
+
+  width: 65%;
+  height: 145%;
+
+  transform: translate(-50%, -50%);
+
+  background: radial-gradient(
+    ellipse,
+    rgba(242, 108, 79, 0.12) 0%,
+    rgba(242, 108, 79, 0.035) 36%,
+    transparent 72%
+  );
+
+  filter: blur(18px);
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ================================================================
+   TOP HUD
+   ================================================================ */
+
+.tech-stack-top {
+  position: absolute;
+
+  left: 50%;
+  top: 13px;
+
+  width: min(92%, 1100px);
+
+  transform: translateX(-50%);
+
+  display: grid;
+
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+
+/* ================================================================
+   LEFT STATUS
+   ================================================================ */
+
+.tech-stack-status {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  justify-self: start;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(37, 39, 49, 0.42);
+}
+
+.tech-status-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: var(--coral);
+
+  box-shadow:
+    0 0 0 4px rgba(242, 108, 79, 0.08),
+    0 0 13px rgba(242, 108, 79, 0.5);
+
+  animation: tech-status-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes tech-status-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+/* ================================================================
+   CENTER TITLE
+   ================================================================ */
+
+.tech-stack-title {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 9px;
+
+  letter-spacing: 0.24em;
+
+  color: rgba(37, 39, 49, 0.45);
+}
+
+.tech-stack-title strong {
+  color: var(--coral-dark);
+
+  font-weight: 800;
+}
+
+/* ================================================================
+   RIGHT COUNT
+   ================================================================ */
+
+.tech-stack-count {
+  display: flex;
+  align-items: baseline;
+
+  gap: 7px;
+
+  justify-self: end;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.tech-stack-count span {
+  font-size: 12px;
+
+  font-weight: 800;
+
+  color: var(--coral);
+}
+
+.tech-stack-count small {
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.16em;
+
+  color: rgba(37, 39, 49, 0.35);
+}
+
+/* ================================================================
+   CURVE WINDOW
+   ================================================================ */
+
+.tech-curve-window {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 43px;
+
+  height: 105px;
+
+  overflow: hidden;
+
+  perspective: 1100px;
+}
+
+/* ================================================================
+   SIGNATURE FIGURE-8 ENERGY PATH
+   ================================================================ */
+
+.tech-curve-line {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 135%;
+  height: 105px;
+
+  transform: translate(-50%, -50%) rotate(-3deg);
+
+  border: 1px solid transparent;
+
+  border-top-color: rgba(242, 108, 79, 0.32);
+  border-bottom-color: rgba(242, 108, 79, 0.08);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 10px rgba(242, 108, 79, 0.08),
+    0 0 30px rgba(242, 108, 79, 0.035);
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+/* ================================================================
+   CROSSING ORBIT
+   ================================================================ */
+
+.tech-curve-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 82%;
+  height: 72px;
+
+  transform: translate(-50%, -50%) rotate(180deg);
+
+  border: 1px solid transparent;
+
+  border-top-color: rgba(124, 77, 255, 0.17);
+  border-bottom-color: rgba(124, 77, 255, 0.06);
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 18px rgba(124, 77, 255, 0.045);
+
+  pointer-events: none;
+}
+
+/* ================================================================
+   CENTRAL ENERGY CORE
+   ================================================================ */
+
+.tech-curve-window::before {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #f26c4f;
+
+  box-shadow:
+    0 0 0 4px rgba(242, 108, 79, 0.055),
+    0 0 12px rgba(242, 108, 79, 0.55),
+    0 0 28px rgba(242, 108, 79, 0.2);
+
+  animation: tech-core-pulse 2.2s ease-in-out infinite;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+@keyframes tech-core-pulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(0.7);
+
+    opacity: 0.55;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.35);
+
+    opacity: 1;
+  }
+}
+
+/* ================================================================
+   FOUR SMALL ORBITAL SIGNALS
+   ================================================================ */
+
+.tech-curve-window::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 100%;
+  height: 1px;
+
+  transform: translate(-50%, -50%) rotate(-8deg);
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 18%,
+    rgba(242, 108, 79, 0.08) 28%,
+    rgba(242, 108, 79, 0.2) 50%,
+    rgba(242, 108, 79, 0.08) 72%,
+    transparent 82%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+/* ================================================================
+   TRAVELING ENERGY BEAM
+   ================================================================ */
+
+.tech-travel-light {
+  position: absolute;
+
+  left: -12%;
+  top: 50%;
+
+  width: 90px;
+  height: 3px;
+
+  border-radius: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(242, 108, 79, 0.12),
+    rgba(242, 108, 79, 0.8),
+    rgba(255, 255, 255, 0.95),
+    rgba(242, 108, 79, 0.3),
+    transparent
+  );
+
+  filter: blur(0.25px) drop-shadow(0 0 8px rgba(242, 108, 79, 0.45));
+
+  animation: tech-energy-flight 5.5s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+@keyframes tech-energy-flight {
+  0% {
+    left: -12%;
+    top: 38%;
+
+    opacity: 0;
+
+    transform: rotate(-13deg) scaleX(0.7);
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  22% {
+    top: 28%;
+
+    transform: rotate(-20deg) scaleX(1);
+  }
+
+  38% {
+    top: 43%;
+
+    transform: rotate(13deg) scaleX(1.15);
+  }
+
+  50% {
+    left: 50%;
+    top: 50%;
+
+    transform: rotate(0deg) scaleX(1.3);
+
+    filter: blur(0.2px) drop-shadow(0 0 12px rgba(242, 108, 79, 0.65));
+  }
+
+  62% {
+    top: 57%;
+
+    transform: rotate(-13deg) scaleX(1.15);
+  }
+
+  78% {
+    top: 73%;
+
+    transform: rotate(18deg) scaleX(1);
+  }
+
+  92% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 112%;
+    top: 41%;
+
+    opacity: 0;
+
+    transform: rotate(10deg) scaleX(0.7);
+  }
+}
+/* ================================================================
+   INFINITE TRACK
+   ================================================================ */
+
+.tech-curve-track {
+  position: absolute;
+
+  top: 17px;
+  left: 0;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 22px;
+
+  width: max-content;
+
+  animation: tech-orbital-scroll 38s linear infinite;
+
+  will-change: transform;
+
+  z-index: 5;
+}
+
+/* ================================================================
+   15 NODE ORBITAL PATH
+
+   This is intentionally NOT a perfect parabola.
+
+   Left side  → descends
+   Middle     → rises
+   Right side → descends
+
+   The slight asymmetry makes it feel like an orbital trajectory.
+   ================================================================ */
+
+.tech-node-1 {
+  --curve-y: 31px;
+  --curve-r: -8deg;
+}
+
+.tech-node-2 {
+  --curve-y: 23px;
+  --curve-r: -7deg;
+}
+
+.tech-node-3 {
+  --curve-y: 14px;
+  --curve-r: -5deg;
+}
+
+.tech-node-4 {
+  --curve-y: 5px;
+  --curve-r: -3deg;
+}
+
+.tech-node-5 {
+  --curve-y: -4px;
+  --curve-r: -1deg;
+}
+
+.tech-node-6 {
+  --curve-y: -12px;
+  --curve-r: 1deg;
+}
+
+.tech-node-7 {
+  --curve-y: -18px;
+  --curve-r: 2deg;
+}
+
+.tech-node-8 {
+  --curve-y: -21px;
+  --curve-r: 3deg;
+}
+
+.tech-node-9 {
+  --curve-y: -18px;
+  --curve-r: 2deg;
+}
+
+.tech-node-10 {
+  --curve-y: -11px;
+  --curve-r: 0deg;
+}
+
+.tech-node-11 {
+  --curve-y: -2px;
+  --curve-r: -2deg;
+}
+
+.tech-node-12 {
+  --curve-y: 7px;
+  --curve-r: -4deg;
+}
+
+.tech-node-13 {
+  --curve-y: 16px;
+  --curve-r: -6deg;
+}
+
+.tech-node-14 {
+  --curve-y: 25px;
+  --curve-r: -7deg;
+}
+
+.tech-node-15 {
+  --curve-y: 33px;
+  --curve-r: -9deg;
+}
+
+/* ================================================================
+   TECH NODE
+   ================================================================ */
+
+.tech-node {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  width: 126px;
+  height: 48px;
+
+  padding: 0 14px;
+
+  flex-shrink: 0;
+
+  transform: translateY(var(--curve-y)) rotate(var(--curve-r));
+
+  border: 1px solid rgba(242, 108, 79, 0.14);
+
+  border-radius: 15px;
+
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 242, 237, 0.76));
+
+  box-shadow:
+    0 8px 22px rgba(53, 38, 33, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+
+  cursor: default;
+}
+
+/* ================================================================
+   ICON
+   ================================================================ */
+
+.tech-node img {
+  width: 25px;
+  height: 25px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.08));
+
+  transition:
+    transform 300ms ease,
+    filter 300ms ease;
+}
+
+/* ================================================================
+   TECH NAME
+   ================================================================ */
+
+.tech-node span {
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  color: #30343c;
+
+  white-space: nowrap;
+}
+
+/* ================================================================
+   MICRO NUMBER
+   ================================================================ */
+
+.tech-node i {
+  position: absolute;
+
+  right: 7px;
+  top: 5px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 5px;
+
+  font-style: normal;
+
+  letter-spacing: 0.08em;
+
+  color: rgba(180, 70, 47, 0.38);
+}
+
+/* ================================================================
+   NODE GLOW
+   ================================================================ */
+
+.tech-node-glow {
+  position: absolute;
+
+  left: 50%;
+  bottom: -10px;
+
+  width: 52%;
+  height: 13px;
+
+  transform: translateX(-50%);
+
+  background: radial-gradient(ellipse, rgba(242, 108, 79, 0.22), transparent 70%);
+
+  filter: blur(5px);
+
+  opacity: 0;
+
+  transition: opacity 300ms ease;
+
+  pointer-events: none;
+}
+
+/* ================================================================
+   HOVER
+   ================================================================ */
+
+.tech-node:hover {
+  transform: translateY(calc(var(--curve-y) - 9px)) rotate(0deg) scale(1.07);
+
+  border-color: rgba(242, 108, 79, 0.45);
+
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.99), rgba(255, 233, 226, 0.96));
+
+  box-shadow:
+    0 17px 34px rgba(242, 108, 79, 0.12),
+    0 0 25px rgba(242, 108, 79, 0.08);
+}
+
+.tech-node:hover img {
+  transform: scale(1.18) rotate(-5deg);
+
+  filter: drop-shadow(0 4px 9px rgba(242, 108, 79, 0.18));
+}
+
+.tech-node:hover .tech-node-glow {
+  opacity: 1;
+}
+
+/* ================================================================
+   INFINITE LOOP
+
+   IMPORTANT:
+   HTML must contain:
+   15 nodes + exact duplicate 15 nodes.
+
+   -50% = exactly one complete set.
+   ================================================================ */
+
+@keyframes tech-orbital-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ================================================================
+   PAUSE ON HOVER
+   ================================================================ */
+
+.tech-stack-curve:hover .tech-curve-track {
+  animation-play-state: paused;
+}
+
+/* ================================================================
+   BOTTOM LABEL
+   ================================================================ */
+
+.tech-stack-bottom {
+  position: absolute;
+
+  bottom: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 6px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color: rgba(37, 39, 49, 0.27);
+
+  white-space: nowrap;
+
+  z-index: 15;
+
+  pointer-events: none;
+}
+
+.tech-stack-bottom b {
+  color: rgba(242, 108, 79, 0.5);
+
+  font-size: 7px;
+}
+
+/* ================================================================
+   MOBILE
+   ================================================================ */
+
+@media screen and (max-width: 768px) {
+  .tech-stack-curve {
+    height: 150px;
+  }
+
+  .tech-stack-top {
+    top: 10px;
+
+    width: 88%;
+  }
+
+  .tech-stack-status {
+    font-size: 6px;
+  }
+
+  .tech-stack-title {
+    font-size: 7px;
+  }
+
+  .tech-stack-count small {
+    display: none;
+  }
+
+  .tech-curve-window {
+    top: 38px;
+
+    height: 92px;
+  }
+
+  .tech-curve-track {
+    top: 19px;
+
+    gap: 10px;
+
+    animation-duration: 31s;
+  }
+
+  .tech-node {
+    width: 104px;
+
+    height: 42px;
+
+    padding: 0 11px;
+
+    gap: 7px;
+
+    border-radius: 13px;
+  }
+
+  .tech-node img {
+    width: 21px;
+    height: 21px;
+  }
+
+  .tech-node span {
+    font-size: 8px;
+  }
+
+  .tech-node i {
+    display: none;
+  }
+
+  /* MOBILE ORBIT */
+  /* ================================================================
+   SIGNATURE 15-NODE PATH
+   ================================================================ */
+
+  .tech-node-1 {
+    --curve-y: 30px;
+    --curve-r: -8deg;
+  }
+
+  .tech-node-2 {
+    --curve-y: 22px;
+    --curve-r: -6deg;
+  }
+
+  .tech-node-3 {
+    --curve-y: 10px;
+    --curve-r: -3deg;
+  }
+
+  .tech-node-4 {
+    --curve-y: -4px;
+    --curve-r: 1deg;
+  }
+
+  .tech-node-5 {
+    --curve-y: -17px;
+    --curve-r: 5deg;
+  }
+
+  .tech-node-6 {
+    --curve-y: -24px;
+    --curve-r: 7deg;
+  }
+
+  .tech-node-7 {
+    --curve-y: -14px;
+    --curve-r: 4deg;
+  }
+
+  .tech-node-8 {
+    --curve-y: 0px;
+    --curve-r: 0deg;
+  }
+
+  .tech-node-9 {
+    --curve-y: 14px;
+    --curve-r: -4deg;
+  }
+
+  .tech-node-10 {
+    --curve-y: 23px;
+    --curve-r: -7deg;
+  }
+
+  .tech-node-11 {
+    --curve-y: 17px;
+    --curve-r: -5deg;
+  }
+
+  .tech-node-12 {
+    --curve-y: 5px;
+    --curve-r: -2deg;
+  }
+
+  .tech-node-13 {
+    --curve-y: -8px;
+    --curve-r: 2deg;
+  }
+
+  .tech-node-14 {
+    --curve-y: -20px;
+    --curve-r: 6deg;
+  }
+
+  .tech-node-15 {
+    --curve-y: -28px;
+    --curve-r: 8deg;
+  }
+
+  .tech-stack-bottom {
+    bottom: 7px;
+
+    font-size: 5px;
+
+    gap: 6px;
+  }
+
+  .tech-curve-line {
+    width: 155%;
+
+    top: 14px;
+  }
+}
+
+/* ================================================================
+   REDUCED MOTION
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-curve-track,
+  .tech-travel-light,
+  .tech-status-dot {
+    animation: none !important;
+  }
+
+  .tech-node {
+    transition: none;
+  }
+}
