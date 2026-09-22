@@ -5282,3 +5282,212 @@ main-footer .section {
     filter: drop-shadow(0 0 3px rgba(242, 108, 79, 0.7));
   }
 }
+/* ================================================================
+   MOBILE TECH STACK — CLEAN STRAIGHT MODE
+   ================================================================ */
+
+@media screen and (max-width: 768px) {
+  /* --------------------------------------------------------------
+     1. KEEP ALL NODES ON ONE STRAIGHT LINE
+     -------------------------------------------------------------- */
+
+  .tech-node-1,
+  .tech-node-2,
+  .tech-node-3,
+  .tech-node-4,
+  .tech-node-5,
+  .tech-node-6,
+  .tech-node-7,
+  .tech-node-8,
+  .tech-node-9,
+  .tech-node-10,
+  .tech-node-11,
+  .tech-node-12,
+  .tech-node-13,
+  .tech-node-14,
+  .tech-node-15 {
+    --curve-y: 0px !important;
+    --curve-r: 0deg !important;
+  }
+
+  /* --------------------------------------------------------------
+     2. FORCE STRAIGHT CARD TRANSFORM
+     -------------------------------------------------------------- */
+
+  .tech-node {
+    transform: translate3d(0, 0, 0) !important;
+
+    rotate: 0deg !important;
+
+    will-change: transform;
+  }
+
+  /* --------------------------------------------------------------
+     3. STRAIGHT PATH
+     -------------------------------------------------------------- */
+
+  .tech-curve-line {
+    top: 50% !important;
+
+    left: 0 !important;
+
+    width: 100% !important;
+
+    height: 1px !important;
+
+    transform: translateY(-50%) !important;
+  }
+
+  /* Remove the old curved orange path */
+
+  .tech-curve-line::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(242, 108, 79, 0.16) 12%,
+      rgba(242, 108, 79, 0.28) 50%,
+      rgba(242, 108, 79, 0.16) 88%,
+      transparent 100%
+    );
+
+    filter: drop-shadow(0 0 5px rgba(242, 108, 79, 0.1));
+  }
+
+  /* Remove old purple curves */
+
+  .tech-curve-line::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 4px;
+
+    width: 100%;
+    height: 1px;
+
+    background: linear-gradient(90deg, transparent, rgba(124, 77, 255, 0.08), transparent);
+  }
+
+  /* --------------------------------------------------------------
+     4. PUT CARDS DIRECTLY ON THE PATH
+     -------------------------------------------------------------- */
+
+  .tech-curve-track {
+    top: 22px !important;
+
+    gap: 10px !important;
+
+    align-items: center !important;
+
+    animation: tech-track-scroll 32s linear infinite !important;
+
+    will-change: transform;
+
+    transform: translate3d(0, 0, 0);
+
+    backface-visibility: hidden;
+
+    perspective: 1000px;
+  }
+
+  /* --------------------------------------------------------------
+     5. SMALLER MOBILE CARDS
+     -------------------------------------------------------------- */
+
+  .tech-node {
+    width: 104px !important;
+
+    height: 42px !important;
+
+    padding: 0 11px !important;
+
+    gap: 7px !important;
+
+    border-radius: 13px !important;
+
+    flex-shrink: 0;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+  }
+
+  /* --------------------------------------------------------------
+     6. REMOVE HOVER MOVEMENT ON TOUCH DEVICES
+     -------------------------------------------------------------- */
+
+  .tech-node:hover {
+    transform: translate3d(0, 0, 0) !important;
+
+    rotate: 0deg !important;
+
+    scale: 1 !important;
+  }
+
+  /* --------------------------------------------------------------
+     7. CLEANER ICONS
+     -------------------------------------------------------------- */
+
+  .tech-node img {
+    width: 21px !important;
+
+    height: 21px !important;
+
+    transform: none !important;
+  }
+
+  /* --------------------------------------------------------------
+     8. SMOOTH TRACK
+     -------------------------------------------------------------- */
+
+  .tech-curve-track {
+    -webkit-transform: translate3d(0, 0, 0);
+
+    transform: translate3d(0, 0, 0);
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+
+    -webkit-perspective: 1000px;
+
+    perspective: 1000px;
+  }
+
+  /* --------------------------------------------------------------
+     9. MOBILE TRAVELLING DOT
+     -------------------------------------------------------------- */
+
+  .tech-travel-light {
+    height: 2px !important;
+
+    width: 55px !important;
+
+    top: 50% !important;
+
+    transform: translateY(-50%) !important;
+
+    animation-duration: 7s !important;
+  }
+
+  /* --------------------------------------------------------------
+     10. REDUCE VISUAL NOISE
+     -------------------------------------------------------------- */
+
+  .tech-ambient-glow {
+    opacity: 0.45;
+
+    filter: blur(14px);
+  }
+}
