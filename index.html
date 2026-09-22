@@ -168,18 +168,112 @@
   <!-- =======================================================
        CURVED TRACK
        ======================================================= -->
+<div class="tech-curve-window">
+<!-- =========================================================
+     CURVED TRAVEL PATH
+     ========================================================= -->
 
-  <div class="tech-curve-window">
+<svg class="tech-path-svg"
+     viewBox="0 0 1600 110"
+     preserveAspectRatio="none"
+     aria-hidden="true">
 
+    <!-- The actual path -->
+    <path
+        id="techTravelPath"
+        class="tech-main-path"
+        d="
+        M -100 58
+        C 80 10, 170 10, 320 55
+        C 470 100, 570 100, 720 55
+        C 870 10, 970 10, 1120 55
+        C 1270 100, 1380 100, 1530 52
+        C 1600 30, 1650 30, 1720 50
+        "
+    />
+
+    <!-- Soft secondary line -->
+    <path
+        class="tech-secondary-path"
+        d="
+        M -100 78
+        C 80 105, 190 105, 340 70
+        C 490 35, 590 35, 740 70
+        C 890 105, 990 105, 1140 70
+        C 1290 35, 1410 35, 1530 68
+        C 1620 90, 1670 88, 1720 72
+        "
+    />
+
+    <!-- =====================================================
+         TRAVELLING DOTS
+         ===================================================== -->
+
+    <circle class="path-dot dot-1" r="3">
+        <animateMotion
+            dur="7s"
+            repeatCount="indefinite"
+            begin="0s"
+            rotate="auto">
+            <mpath href="#techTravelPath"/>
+        </animateMotion>
+    </circle>
+
+    <circle class="path-dot dot-2" r="2.5">
+        <animateMotion
+            dur="8.5s"
+            repeatCount="indefinite"
+            begin="-2.2s"
+            rotate="auto">
+            <mpath href="#techTravelPath"/>
+        </animateMotion>
+    </circle>
+
+    <circle class="path-dot dot-3" r="2.5">
+        <animateMotion
+            dur="10s"
+            repeatCount="indefinite"
+            begin="-5s"
+            rotate="auto">
+            <mpath href="#techTravelPath"/>
+        </animateMotion>
+    </circle>
+
+    <circle class="path-dot dot-4" r="2">
+        <animateMotion
+            dur="8s"
+            repeatCount="indefinite"
+            begin="-6.5s"
+            rotate="auto">
+            <mpath href="#techTravelPath"/>
+        </animateMotion>
+    </circle>
+
+    <circle class="path-dot dot-5" r="2">
+        <animateMotion
+            dur="11s"
+            repeatCount="indefinite"
+            begin="-3.5s"
+            rotate="auto">
+            <mpath href="#techTravelPath"/>
+        </animateMotion>
+    </circle>
+
+</svg>
     <!-- Glowing orbital curve -->
     <div class="tech-curve-line"></div>
+
+    <!-- Travelling dots -->
+    <div class="tech-travel-dot tech-travel-dot-1"></div>
+    <div class="tech-travel-dot tech-travel-dot-2"></div>
+    <div class="tech-travel-dot tech-travel-dot-3"></div>
+    <div class="tech-travel-dot tech-travel-dot-4"></div>
+    <div class="tech-travel-dot tech-travel-dot-5"></div>
 
     <!-- Travelling light -->
     <div class="tech-travel-light"></div>
 
-
     <div class="tech-curve-track">
-
 
       <!-- =====================================================
            SET 1 — 15 TECHNOLOGIES

@@ -218,3 +218,191 @@ window.addEventListener("load", function () {
 
   updateBackToTop();
 });
+/* ================================================================
+   TECH STACK — ORGANIC FLOWING PATH
+   ================================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const windowArea = document.querySelector(".tech-curve-window");
+
+  if (!windowArea) return;
+
+  /* --------------------------------------------------------------
+     REMOVE OLD CSS PATH
+     -------------------------------------------------------------- */
+
+  const oldLine = windowArea.querySelector(".tech-curve-line");
+
+  if (oldLine) {
+    oldLine.remove();
+  }
+
+  /* --------------------------------------------------------------
+     SVG
+     -------------------------------------------------------------- */
+
+  const svgNS = "http://www.w3.org/2000/svg";
+
+  const svg = document.createElementNS(svgNS, "svg");
+
+  svg.classList.add("tech-flow-svg");
+
+  svg.setAttribute("viewBox", "0 0 1600 110");
+
+  svg.setAttribute("preserveAspectRatio", "none");
+
+  /* --------------------------------------------------------------
+     MAIN ORGANIC PATH
+     -------------------------------------------------------------- */
+
+  const mainPath = document.createElementNS(svgNS, "path");
+
+  mainPath.classList.add("tech-flow-main");
+
+  mainPath.setAttribute(
+    "d",
+    `
+      M -100 72
+
+      C 70 12,
+        170 8,
+        300 48
+
+      C 425 88,
+        535 103,
+        665 48
+
+      C 790 -7,
+        905 0,
+        1035 53
+
+      C 1165 106,
+        1285 105,
+        1410 43
+
+      C 1515 -8,
+        1620 20,
+        1710 68
+    `
+  );
+
+  svg.appendChild(mainPath);
+
+  /* --------------------------------------------------------------
+     SECONDARY FLOWING PATH
+     -------------------------------------------------------------- */
+
+  const secondaryPath = document.createElementNS(svgNS, "path");
+
+  secondaryPath.classList.add("tech-flow-secondary");
+
+  secondaryPath.setAttribute(
+    "d",
+    `
+      M -100 38
+
+      C 80 94,
+        190 100,
+        320 57
+
+      C 450 14,
+        570 5,
+        700 54
+
+      C 830 103,
+        940 108,
+        1070 57
+
+      C 1200 6,
+        1320 7,
+        1440 55
+
+      C 1540 95,
+        1630 88,
+        1710 42
+    `
+  );
+
+  svg.appendChild(secondaryPath);
+
+  /* --------------------------------------------------------------
+     GLOW
+     -------------------------------------------------------------- */
+
+  const glowPath = document.createElementNS(svgNS, "path");
+
+  glowPath.classList.add("tech-flow-glow");
+
+  glowPath.setAttribute("d", mainPath.getAttribute("d"));
+
+  svg.insertBefore(glowPath, mainPath);
+
+  /* --------------------------------------------------------------
+     MOVING GLOW
+     -------------------------------------------------------------- */
+
+  const movingGlow = document.createElementNS(svgNS, "circle");
+
+  movingGlow.classList.add("tech-flow-light-glow");
+
+  movingGlow.setAttribute("r", "11");
+
+  svg.appendChild(movingGlow);
+
+  /* --------------------------------------------------------------
+     MOVING LIGHT
+     -------------------------------------------------------------- */
+
+  const movingLight = document.createElementNS(svgNS, "circle");
+
+  movingLight.classList.add("tech-flow-light");
+
+  movingLight.setAttribute("r", "2.7");
+
+  svg.appendChild(movingLight);
+
+  windowArea.appendChild(svg);
+
+  /* --------------------------------------------------------------
+     ANIMATION
+     -------------------------------------------------------------- */
+
+  let progress = 0;
+
+  let previousTime = performance.now();
+
+  function animatePath(time) {
+    const delta = time - previousTime;
+
+    previousTime = time;
+
+    /*
+      SPEED
+
+      Smaller = slower
+      Larger = faster
+    */
+
+    progress += delta * 0.000035;
+
+    if (progress >= 1) {
+      progress = 0;
+    }
+
+    const pathLength = mainPath.getTotalLength();
+
+    const point = mainPath.getPointAtLength(pathLength * progress);
+
+    movingLight.setAttribute("cx", point.x);
+
+    movingLight.setAttribute("cy", point.y);
+
+    movingGlow.setAttribute("cx", point.x);
+
+    movingGlow.setAttribute("cy", point.y);
+
+    requestAnimationFrame(animatePath);
+  }
+
+  requestAnimationFrame(animatePath);
+});
