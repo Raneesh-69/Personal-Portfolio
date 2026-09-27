@@ -77,6 +77,125 @@ const projects = {
     </p>
     `,
   },
+  "credit-card-fraud-detection": {
+    title: "💳 Credit Card Fraud Detection (AI-Powered Fraud Analytics)",
+    category: "Machine Learning • Classification",
+
+    description: `
+  <h4>1. Description</h4>
+  <p>
+    AI-powered credit card fraud detection platform that uses machine learning
+    to analyze transaction data, estimate fraud probability, and identify
+    potentially fraudulent transactions through an interactive web dashboard.
+  </p>
+
+  <h4>2. Problem Statement</h4>
+  <p>
+    Credit card fraud detection is challenging because fraudulent transactions
+    represent only a very small portion of total transactions. This project
+    applies machine learning to detect suspicious transactions while handling
+    highly imbalanced transaction data.
+  </p>
+
+  <h4>3. Features</h4>
+  <ul>
+    <li>🤖 XGBoost-powered fraud detection</li>
+    <li>🔍 Real-time transaction analysis</li>
+    <li>⚠️ Fraud probability and risk assessment</li>
+    <li>🎲 Demo transaction generator</li>
+    <li>📊 Interactive analytics dashboard</li>
+    <li>📈 Fraud probability trend visualization</li>
+    <li>🧾 Session-based detection history</li>
+    <li>📂 CSV dataset analyzer</li>
+    <li>📥 Sample dataset downloads</li>
+    <li>🖥️ Interactive ML dashboard</li>
+    <li>📱 Responsive fintech interface</li>
+  </ul>
+
+  <h4>4. Tech Stack</h4>
+  <ul>
+    <li>React.js</li>
+    <li>JavaScript</li>
+    <li>Tailwind CSS</li>
+    <li>Framer Motion</li>
+    <li>Recharts</li>
+    <li>Lucide React</li>
+    <li>Axios</li>
+    <li>React Router</li>
+    <li>Python</li>
+    <li>FastAPI</li>
+    <li>Uvicorn</li>
+    <li>Pydantic</li>
+    <li>XGBoost</li>
+    <li>Scikit-learn</li>
+    <li>NumPy</li>
+    <li>Pandas</li>
+    <li>Joblib</li>
+    <li>Git & GitHub</li>
+    <li>Vercel</li>
+    <li>Render</li>
+  </ul>
+
+  <h4>5. Dataset</h4>
+  <p>
+    Dataset: Credit Card Fraud Detection Dataset<br>
+    Total Transactions: 284,807<br>
+    Fraudulent Transactions: 492<br>
+    Legitimate Transactions: 284,315<br>
+    Input Features: 30 + target class<br>
+    Fraud Rate: Approximately 0.17%
+  </p>
+
+  <p>
+    Source:
+    <a href="https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud"
+       target="_blank">
+      Kaggle - Credit Card Fraud Detection
+    </a>
+  </p>
+
+  <h4>6. Model / Approach</h4>
+  <ul>
+    <li>Preprocess and analyze highly imbalanced transaction data</li>
+    <li>Evaluate Logistic Regression, Random Forest, and XGBoost</li>
+    <li>Incorporate class weighting during model training</li>
+    <li>Use XGBoost for final fraud classification</li>
+    <li>Generate fraud probability for each transaction</li>
+    <li>Convert prediction probability into LOW, MEDIUM, and HIGH risk levels</li>
+    <li>Expose prediction functionality through FastAPI REST APIs</li>
+    <li>Display results through a React-based dashboard</li>
+  </ul>
+
+  <h4>7. Results</h4>
+  <ul>
+    <li>XGBoost ROC-AUC: <strong>0.9826</strong></li>
+    <li>XGBoost PR-AUC: <strong>0.8795</strong></li>
+    <li>XGBoost Precision: <strong>0.86</strong></li>
+    <li>XGBoost Recall: <strong>0.85</strong></li>
+    <li>XGBoost F1-Score: <strong>0.86</strong></li>
+    <li>Successfully analyzes transaction-level fraud risk</li>
+    <li>Provides interactive model and dataset analytics</li>
+    <li>Supports CSV-based dataset analysis</li>
+    <li>Deployed as a full-stack web application</li>
+  </ul>
+
+  <h4>8. Links</h4>
+  <p>
+    GitHub:
+    <a href="https://github.com/Raneesh-69/credit-card-fraud-detection"
+       target="_blank">
+      View Repository 🗃️
+    </a>
+    <br><br>
+
+    Live Demo:
+    <a href="https://frontend-ivory-two-40.vercel.app/"
+       target="_blank">
+      Open Application 🚀
+    </a>
+  </p>
+  `,
+  },
   "focus-flow": {
     title: "FocusFlow (AI-Powered Productivity & Focus Management Platform)",
     category: "Productivity • Full Stack • AI",
