@@ -4784,7 +4784,40 @@ main-footer .section {
 /* ================================================================
    HOVER
    ================================================================ */
+.tech-node {
+  position: relative;
 
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 126px;
+  height: 48px;
+
+  padding: 0 14px;
+
+  flex-shrink: 0;
+
+  pointer-events: auto; /* ADD THIS */
+
+  transform: translate3d(0, var(--curve-y), 0) rotate(var(--curve-r));
+
+  border: 1px solid rgba(242, 108, 79, 0.14);
+  border-radius: 15px;
+
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 242, 237, 0.78));
+
+  box-shadow:
+    0 8px 22px rgba(53, 38, 33, 0.055),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease,
+    box-shadow 300ms ease;
+}
 .tech-node:hover {
   transform: translate3d(0, calc(var(--curve-y) - 9px), 0) rotate(0deg) scale(1.07);
 
