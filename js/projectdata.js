@@ -1,4 +1,115 @@
 const projects = {
+  "autodeploy-z": {
+    title: "AutoDeployZ (Automated DevOps CI/CD Platform)",
+    category: "DevOps • CI/CD • Cloud",
+
+    description: `
+    <h4>1. Description</h4>
+    <p>
+      AutoDeployZ is a modern DevOps dashboard designed to visualize and
+      organize the software delivery lifecycle. It provides a centralized
+      interface for exploring CI/CD pipelines, deployments, infrastructure,
+      security, monitoring, and DevOps toolchain workflows.
+    </p>
+
+    <h4>2. Problem Statement</h4>
+    <p>
+      Modern software delivery involves multiple tools for source control,
+      continuous integration, containerization, security scanning, infrastructure
+      provisioning, and deployment. Managing these stages separately can make
+      it difficult to understand the overall workflow. AutoDeployZ brings these
+      DevOps activities together in a unified dashboard.
+    </p>
+
+    <h4>3. Features</h4>
+    <ul>
+      <li>🚀 Centralized DevOps dashboard</li>
+      <li>🔄 CI/CD pipeline visualization</li>
+      <li>📦 Deployment management interface</li>
+      <li>🏗️ Infrastructure management dashboard</li>
+      <li>🔐 Security scanning workflow visualization</li>
+      <li>🐳 Docker containerization workflow</li>
+      <li>☸️ Kubernetes orchestration concepts</li>
+      <li>⚙️ Terraform and Ansible toolchain integration concepts</li>
+      <li>📊 Deployment analytics and monitoring interface</li>
+      <li>🛠️ Interactive DevOps toolchain designer</li>
+      <li>🎨 Modern dark-themed dashboard UI</li>
+      <li>📱 Responsive user interface</li>
+    </ul>
+
+    <h4>4. Tech Stack</h4>
+    <ul>
+      <li>React.js</li>
+      <li>JavaScript</li>
+      <li>Vite</li>
+      <li>CSS</li>
+      <li>React Flow (@xyflow/react)</li>
+      <li>Lucide React</li>
+      <li>Git & GitHub</li>
+      <li>Vercel</li>
+    </ul>
+
+    <h4>5. DevOps Toolchain</h4>
+    <ul>
+      <li>Git and GitHub — Source Control</li>
+      <li>Jenkins — Continuous Integration and Delivery</li>
+      <li>Docker — Containerization</li>
+      <li>Trivy — Container and Dependency Security Scanning</li>
+      <li>Terraform — Infrastructure as Code</li>
+      <li>Ansible — Configuration Management</li>
+      <li>Kubernetes — Container Orchestration</li>
+      <li>Prometheus and Grafana — Monitoring Concepts</li>
+    </ul>
+
+    <h4>6. Workflow / Approach</h4>
+    <ul>
+      <li>Organize source code using Git and GitHub</li>
+      <li>Represent CI/CD automation through Jenkins pipeline stages</li>
+      <li>Visualize build and testing stages</li>
+      <li>Represent security scanning with Trivy</li>
+      <li>Include Docker image creation in the delivery workflow</li>
+      <li>Visualize infrastructure provisioning with Terraform</li>
+      <li>Represent configuration management using Ansible</li>
+      <li>Include Kubernetes deployment and monitoring stages</li>
+      <li>Present the workflow through an interactive dashboard</li>
+    </ul>
+
+    <h4>7. Project Highlights</h4>
+    <ul>
+      <li>Developed a centralized interface for visualizing DevOps workflows</li>
+      <li>Designed separate dashboard pages for deployments, pipelines,
+          infrastructure, security, monitoring, and toolchain management</li>
+      <li>Built an interactive toolchain visualization using React Flow</li>
+      <li>Designed reusable UI components and responsive dashboard layouts</li>
+      <li>Organized multiple DevOps lifecycle stages in a single interface</li>
+    </ul>
+
+    <p>
+      <strong>Implementation Note:</strong>
+      Dashboard visualizations and demo controls do not automatically execute
+      real CI/CD pipelines or connect to live infrastructure. Actual Jenkins,
+      Docker, Kubernetes, Terraform, Ansible, security scanning, and monitoring
+      operations require their respective integrations to be configured.
+    </p>
+
+    <h4>8. Links</h4>
+    <p>
+      GitHub:
+      <a href="https://github.com/Raneesh-69/AutoDeployZ"
+         target="_blank" rel="noopener noreferrer">
+        View Repository 🚀
+      </a>
+      <br><br>
+
+      Live Demo:
+      <a href="https://auto-deploy-z.vercel.app/"
+         target="_blank" rel="noopener noreferrer">
+        Open AutoDeployZ
+      </a>
+    </p>
+  `,
+  },
+
   "ai-pdf-assistant": {
     title: "AI PDF Assistant (LLM-Powered Document Analyzer)",
     category: "NLP • LLM",
