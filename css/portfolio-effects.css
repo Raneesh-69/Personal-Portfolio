@@ -1,4 +1,82 @@
 /* RANEESH PORTFOLIO — BOOT + AI JOURNEY */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-group(root) {
+  animation-duration: 520ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 520ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+html[data-transition-direction="right"]::view-transition-old(root) {
+  animation-name: page-swipe-out-left;
+}
+
+html[data-transition-direction="right"]::view-transition-new(root) {
+  animation-name: page-swipe-in-right;
+}
+
+html[data-transition-direction="left"]::view-transition-old(root) {
+  animation-name: page-swipe-out-right;
+}
+
+html[data-transition-direction="left"]::view-transition-new(root) {
+  animation-name: page-swipe-in-left;
+}
+
+@keyframes page-swipe-out-left {
+  to {
+    opacity: 0;
+    transform: translateX(-14%);
+  }
+}
+
+@keyframes page-swipe-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(14%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes page-swipe-out-right {
+  to {
+    opacity: 0;
+    transform: translateX(14%);
+  }
+}
+
+@keyframes page-swipe-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-14%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(root),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 1ms;
+  }
+}
+
 html.boot-v5-lock,
 html.boot-v5-lock body {
   overflow: hidden !important;
